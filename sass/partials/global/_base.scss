@@ -1,0 +1,13 @@
+//////////////////////////////
+// Imports
+//////////////////////////////
+@import 'compass';
+@import 'aura';
+
+//////////////////////////////
+// Implement a Natural Box Model
+// From http://paulirish.com/2012/box-sizing-border-box-ftw/
+//////////////////////////////
+* { 
+  @include box-sizing(border-box);
+}
