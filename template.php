@@ -45,7 +45,7 @@ function aurora_preprocess_html(&$vars) {
 }
 
 /**
- * Implements hook_process_html()
+ * Implements hook_process_html().
  */
 function aurora_process_html(&$vars) {
   $cf_array = $vars['chromeframe_array'];
@@ -65,5 +65,48 @@ function aurora_js_alter(&$javascript) {
     else {
       $js['scope'] = 'header';
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ */
+function aurora_preprocess_views_view_fields(&$vars) {
+  // Removes wrapping field-content span/div.
+  foreach ($vars['fields'] as $field) {
+    $output = $field->content;
+    
+    if (strpos($output, 'span class="field-content"')) {
+      $output = str_replace('<span class="field-content">', '', $output);
+      $output = substr($output, 0, -7);
+    }
+    else if (strpos($output, 'div class="field-content"')) {
+      $output = str_replace('<div class="field-content">', '', $output);
+      $output = substr($output, 0, -6);
+    }
+    
+    $field->content_unwrapped = $output;
+  }
+}
+
+/**
+ * Implements hook_preprocess_flexslider_views_slideshow_main_frame_row().
+ */
+function aurora_preprocess_flexslider_views_slideshow_main_frame_row(&$vars) {
+  // Removes wrapping div.
+  $vars['rendered_items'] = str_replace('<div class="flexslider-views-slideshow-main-frame-row-item views-row views-row-0 views-row-first views-row-odd">', '', $vars['rendered_items']);
+  $vars['rendered_items'] = substr($vars['rendered_items'], 0, -9);
+}
+
+/**
+ * Implements hook_preprocess_views_slideshow().
+ */
+function aurora_preprocess_views_slideshow(&$vars) {
+  // Set Hide Skin variable to hide skin div.
+  $vars['hide_skin'] = false;
+  
+  // If using the recommended Flexslider, hide skin.
+  if ($vars['options']['slideshow_type'] == 'flexslider_views_slideshow') {
+    $vars['hide_skin'] = true;
   }
 }
