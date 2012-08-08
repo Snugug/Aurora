@@ -1,6 +1,0 @@
-name = Aurora
-description = Lightweight HTML5 base theme
-core = 7.x
-base theme = html5
-
-stylesheets[screen][] = css/style.css
