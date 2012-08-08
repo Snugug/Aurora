@@ -1,0 +1,28 @@
+////////////////////////
+// Base Partials
+//
+// These files will be shared across all three of your output
+//  CSS files. Generally included here are only Compass Extension
+//  imports and imports for variables, functions, mixins, and extendables.
+////////////////////////
+
+////////////////////////
+// Compass Imports
+//
+// Aurora includes @import 'compass' so you don't need to.
+////////////////////////
+
+////////////////////////
+// Compass Extensions
+//
+// Aurora includes Toolkit, Breakpoint, Respond-to, Sassy Buttons, and Susy
+////////////////////////
+@import 'aurora-susy';
+
+////////////////////////
+// Private Imports
+////////////////////////
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+@import 'extendables';
