@@ -26,6 +26,6 @@ Gem::Specification.new do |s|
   # Dependent Gems
   
   s.add_dependency("compass",         [">= 0.13.alpha.0"])
-  s.add_dependency("toolkit",         [">= 0.1.10"])
+  s.add_dependency("toolkit",         [">= 0.1.12"])
   s.add_dependency("sassy-buttons",   [">= 0.1.1"])
 end
