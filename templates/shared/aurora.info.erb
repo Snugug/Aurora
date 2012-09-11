@@ -3,12 +3,12 @@ description =  <%= project_name %> theme based on the Aurora base theme.
 core = 7.x
 base theme = aurora
 
-# Stylesheets
+; Stylesheets
 stylesheets[all][] = <%= project_css %>/style.css
 stylesheets[print][] = <%= project_css %>/print.css
 stylesheets-conditional[lt IE 9][all][] = <%= project_css %>/ie.css
 
-# Regions
+; Regions
 regions[sidebar_first]  = Primary Sidebar
 regions[sidebar_second] = Secondary Sidebar
 regions[content]        = Content
@@ -17,14 +17,16 @@ regions[header]         = Header
 regions[help]           = Help
 regions[highlighted]    = Highlighted
 
-# Chrome Frame Options
+; Chrome Frame Options
 settings[aurora_enable_chrome_frame] = 1
 settings[aurora_min_ie_support] = 10
 
-# Optimization Options
+; Optimization Options
 settings[aurora_footer_js] = 1
 settings[aurora_html_tags] = 1
 
-# Development Options
+; Development Options
 settings[aurora_rebuild_registry] = 0
 settings[aurora_livereload] = 0
+settings[aurora_viewport_width] = 1
+settings[aurora_modernizr_debug] = 1
