@@ -15,10 +15,8 @@ file '../shared/_mixins.scss', :like => :stylesheet, :to => 'partials/global/_mi
 file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/global/_extendables.scss'
 
 file '../shared/_style-guide.scss', :like => :stylesheet, :to => 'partials/styleguide/_style-guide.scss'
-
-file '../shared/_ie-style-guide.scss', :like => :stylesheet, :to => 'partials/styleguide/_ie-style-guide.scss'
-
 file '../shared/_print-style-guide.scss', :like => :stylesheet, :to => 'partials/styleguide/_print-style-guide.scss'
+file '../shared/_ie-style-guide.scss', :like => :stylesheet, :to => 'partials/styleguide/_ie-style-guide.scss'
 
 file '../shared/_layout.scss', :like => :stylesheet, :to => 'partials/layout/_layout.scss'
 file '../shared/_ie-layout.scss', :like => :stylesheet, :to => 'partials/layout/_ie-layout.scss'
