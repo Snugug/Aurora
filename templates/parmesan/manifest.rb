@@ -24,7 +24,7 @@ file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/base/
 # Global partials: Form elements, typeface, etc.
 file '_global.scss',  :like => :stylesheet, :to => 'partials/global/_global.scss'
 file '_defaults.scss',  :like => :stylesheet, :to => 'partials/global/_defaults.scss'
-file '_form.scss',  :like => :stylesheet, :to => 'partials/global/_form.scss'
+file '_forms.scss',  :like => :stylesheet, :to => 'partials/global/_forms.scss'
 file '_type.scss',  :like => :stylesheet, :to => 'partials/global/_type.scss'
 
 # Page-based partials: For site-structure-based content.
