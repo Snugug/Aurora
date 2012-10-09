@@ -5,6 +5,9 @@ file '../shared/aurora.info.erb', :to => "#{options[:project_name] || File.basen
 
 file 'template.php.erb', :to => "template.php", :erb => true
 
+# Add in custom config file.
+file '../shared/config.rb.erb', :to => "config.rb.example", :erb => true
+
 # Stylesheets
 file 'style.scss',  :like => :stylesheet, :media => 'screen, projection', :to => 'style.scss'
 file 'maintenance.scss',  :like => :stylesheet, :media => 'screen, projection', :to => 'maintenance.scss'
