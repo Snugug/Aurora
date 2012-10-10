@@ -1,7 +1,7 @@
 description "Aurora Base Theme"
 
 # ERB ALL the Drupal files!
-file '../shared/aurora.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
+file 'aurora.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
 
 file 'template.php.erb', :to => "template.php", :erb => true
 
