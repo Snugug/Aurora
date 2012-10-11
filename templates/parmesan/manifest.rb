@@ -1,21 +1,19 @@
 description "Aurora Base Theme"
+no_configuration_file!
 
 # ERB ALL the Drupal files!
-file 'aurora.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
+file './shared/aurora.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
 
-file 'template.php.erb', :to => "template.php", :erb => true
+file './shared/template.php.erb', :to => "template.php", :erb => true
 
 # Add in custom config file.
-file '../shared/config.rb.erb', :to => "config.rb.example", :erb => true
+file '../shared/config.rb.erb', :to => "config.rb", :erb => true
 
 # Stylesheets
 file 'style.scss',  :like => :stylesheet, :media => 'screen, projection', :to => 'style.scss'
 file 'maintenance.scss',  :like => :stylesheet, :media => 'screen, projection', :to => 'maintenance.scss'
-file 'normalize.scss',  :like => :stylesheet, :media => 'screen, projection', :to => 'normalize.scss'
-file 'normalize-rtl.scss',  :like => :stylesheet, :media => 'screen, projection', :to => 'normalize-rtl.scss'
 file 'print.scss',  :like => :stylesheet, :media => 'print', :to => 'print.scss'
 file 'ie.scss',     :like => :stylesheet, :media => 'screen, projection', :condition => "lt IE 8", :to => 'ie.scss'
-
 
 # Base partials: Settings and the like.
 file '_base.scss',  :like => :stylesheet, :to => 'partials/base/_base.scss'
@@ -53,7 +51,6 @@ file 'README_PARTIALS.md',  :like => :stylesheet, :to => 'README.md'
 file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
 file '../shared/loader.js',           :like => :javascript, :to => 'loader.js'
 file '../shared/modernizr-2.5.3.js',  :like => :javascript, :to => 'modernizr-2.5.3.js'
-file '../shared/jquery.min.js',  :like => :javascript, :to => 'jquery.min.js'
 
 help %Q{
   Please contact Sam Richard with questions:
