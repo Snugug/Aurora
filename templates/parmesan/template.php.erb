@@ -12,10 +12,11 @@ function <%= project_name %>_preprocess_maintenance_page(&$vars, $hook) {
   // When a variable is manipulated or added in preprocess_html or
   // preprocess_page, that same work is probably needed for the maintenance page
   // as well, so we can just re-use those functions to do that work here.
+  aurora_preprocess_html($variables, $hook)
   <%= project_name %>_preprocess_html($variables, $hook);
   <%= project_name %>_preprocess_page($variables, $hook);
 
-  drupal_add_css(drupal_get_path('theme', '<%= project_name %>') . '/css/maintenance.css', array('group' => CSS_THEME, 'weight' => 1000));
+  drupal_add_css(drupal_get_path('theme', '<%= project_name %>') . '/<%= project_css %>/maintenance.css', array('group' => CSS_THEME, 'weight' => 1000));
 
   // This preprocessor will also be used if the db is inactive. To ensure your
   // theme is used, add the following line to your settings.php file:
@@ -155,14 +156,14 @@ function <%= project_name %>_css_alter(&$css) {
   // dpm($css);
   $path_to_theme = drupal_get_path('theme', '<%= project_name %>');
   // Unset unneeded css if site is in maintainance mode.
-  if (isset($css[$path_to_theme . '/css/maintenance.css'])) {
+  if (isset($css[$path_to_theme . '/<%= project_css %>/maintenance.css'])) {
     $new_css = array();
-    $new_css[$path_to_theme . '/css/normalize.css'] = $css[$path_to_theme . '/css/normalize.css'];
+    $new_css[$path_to_theme . '/<%= project_css %>/normalize.css'] = $css[$path_to_theme . '/<%= project_css %>/normalize.css'];
     // Add in any other css you want to keep in as well.
     $new_css['modules/system/system.messages.css'] = $css['modules/system/system.messages.css'];
 
     // Have maintance.css be last so it can override anything.
-    $new_css[$path_to_theme . '/css/maintenance.css'] = $css[$path_to_theme . '/css/maintenance.css'];
+    $new_css[$path_to_theme . '/<%= project_css %>/maintenance.css'] = $css[$path_to_theme . '/<%= project_css %>/maintenance.css'];
     // Set the $css var to the $new_css.
     $css = $new_css;
   }
@@ -193,6 +194,6 @@ function <%= project_name %>_js_alter(&$javascript) {
     'scope' => 'footer',
     'cache' => FALSE,
     'defer' => FALSE,
-    'data' => 'window.jQuery || document.write(\'<script type="text/javascript" src="/' . $path_to_theme . '/jquery.min.js"><\/script>\')'
+    'data' => 'window.jQuery || document.write(\'<script type="text/javascript" src="/' . $path_to_theme . '/<%= project_js %>/jquery.min.js"><\/script>\')'
   );
 }
