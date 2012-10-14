@@ -19,18 +19,14 @@ file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/globa
 
 file '../shared/_style-guide.scss', :like => :stylesheet, :to => 'partials/styleguide/_style-guide.scss'
 file '../shared/_print-style-guide.scss', :like => :stylesheet, :to => 'partials/styleguide/_print-style-guide.scss'
-file '../shared/_ie-style-guide.scss', :like => :stylesheet, :to => 'partials/styleguide/_ie-style-guide.scss'
 
 file '../shared/_layout.scss', :like => :stylesheet, :to => 'partials/layout/_layout.scss'
-file '../shared/_ie-layout.scss', :like => :stylesheet, :to => 'partials/layout/_ie-layout.scss'
 file '../shared/_print-layout.scss', :like => :stylesheet, :to => 'partials/layout/_print-layout.scss'
 
 file '../shared/_design.scss', :like => :stylesheet, :to => 'partials/design/_design.scss'
-file '../shared/_ie-design.scss', :like => :stylesheet, :to => 'partials/design/_ie-design.scss'
 file '../shared/_print-design.scss', :like => :stylesheet, :to => 'partials/design/_print-design.scss'
 
 file '../shared/print.scss',  :like => :stylesheet, :media => 'print', :to => 'print.scss'
-file '../shared/ie.scss',     :like => :stylesheet, :media => 'screen, projection', :condition => "lt IE 8", :to => 'ie.scss'
 
 # JavaScript
 file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
