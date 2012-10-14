@@ -6,7 +6,6 @@ base theme = aurora
 ; Stylesheets
 stylesheets[all][] = <%= project_css %>/style.css
 stylesheets[print][] = <%= project_css %>/print.css
-stylesheets-conditional[lt IE 9][all][] = <%= project_css %>/ie.css
 
 ; Regions
 regions[header]         = Header
@@ -28,6 +27,8 @@ settings[aurora_min_ie_support] = 10
 ; Optimization Options
 settings[aurora_footer_js] = 1
 settings[aurora_html_tags] = 1
+settings[aurora_jquery_cdn] = 0
+settings[aurora_jquery_version] = 1.4.4
 
 ; Toggle Display
 settings[toggle_logo] = 1
@@ -41,6 +42,7 @@ settings[toggle_breadcrumbs] = 1
 
 ; Development Options
 settings[aurora_rebuild_registry] = 1
+settings[aurora_jquery_min] = 0
 settings[aurora_livereload] = 0
 settings[aurora_viewport_width] = 1
 settings[aurora_modernizr_debug] = 1
