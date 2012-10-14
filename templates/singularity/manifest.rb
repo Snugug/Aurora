@@ -34,6 +34,10 @@ file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
 file '../shared/loader.js',           :like => :javascript, :to => 'loader.js'
 file '../shared/modernizr-2.5.3.js',  :like => :javascript, :to => 'modernizr-2.5.3.js'
 
+# Behaviors
+file 'behaviors/box-sizing/boxsizing.htc'
+file 'behaviors/box-sizing/boxsizing.php'
+
 help %Q{
   Please contact Sam Richard with questions:
 
