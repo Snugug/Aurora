@@ -13,7 +13,6 @@ file '../shared/config.rb.erb', :to => "config.rb", :erb => true
 file 'style.scss',  :like => :stylesheet, :media => 'screen, projection', :to => 'style.scss'
 file 'maintenance.scss',  :like => :stylesheet, :media => 'screen, projection', :to => 'maintenance.scss'
 file 'print.scss',  :like => :stylesheet, :media => 'print', :to => 'print.scss'
-file 'ie.scss',     :like => :stylesheet, :media => 'screen, projection', :condition => "lt IE 8", :to => 'ie.scss'
 
 # Base partials: Settings and the like.
 file '_base.scss',  :like => :stylesheet, :to => 'partials/base/_base.scss'
@@ -29,6 +28,7 @@ file '_forms.scss',  :like => :stylesheet, :to => 'partials/global/_forms.scss'
 file '_type.scss',  :like => :stylesheet, :to => 'partials/global/_type.scss'
 
 # Page-based partials: For site-structure-based content.
+file '_page.scss',  :like => :stylesheet, :to => 'partials/page/_page.scss'
 file '_header.scss',  :like => :stylesheet, :to => 'partials/page/_header.scss'
 file '_content.scss',  :like => :stylesheet, :to => 'partials/page/_content.scss'
 file '_sidebar_first.scss',  :like => :stylesheet, :to => 'partials/page/_sidebar_first.scss'

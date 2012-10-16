@@ -12,6 +12,22 @@
 @import 'partials/base/base';
 
 ////////////////////////
-// Import Style Guide
+// Import Global Stylings
 ////////////////////////
+@import 'partials/global/global';
+
+////////////////////////
+// Import Page Stylings
+////////////////////////
+@import 'partials/page/page';
+
+////////////////////////
+// Import Node Stylings
+////////////////////////
+@import 'partials/node/node';
+
+////////////////////////
+// Import View Stylings
+////////////////////////
+@import 'partials/view/view';
 
