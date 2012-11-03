@@ -13,7 +13,7 @@ file '../shared/aurora.info.erb', :to => "#{options[:project_name] || File.basen
 file '../shared/template.php.erb', :to => "template.php", :erb => true
 
 # Stylesheets
-file '../shared/style.scss',  :like => :stylesheet, :media => 'screen, projection', :to => 'style.scss'
+file '../shared/style.scss',  :like => :stylesheet, :media => 'all', :to => 'style.scss'
 
 file '_base.scss',  :like => :stylesheet, :to => 'partials/global/_base.scss'
 file '../shared/_variables.scss', :like => :stylesheet, :to => 'partials/global/_variables.scss'
@@ -30,7 +30,7 @@ file '../shared/_print-layout.scss', :like => :stylesheet, :to => 'partials/layo
 file '../shared/_design.scss', :like => :stylesheet, :to => 'partials/design/_design.scss'
 file '../shared/_print-design.scss', :like => :stylesheet, :to => 'partials/design/_print-design.scss'
 
-file '../shared/print.scss',  :like => :stylesheet, :media => 'print', :to => 'print.scss'
+file '../shared/_print.scss',  :like => :stylesheet, :to => '_print.scss'
 
 # JavaScript
 file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
