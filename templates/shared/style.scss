@@ -25,3 +25,7 @@
 // Import Design
 ////////////////////////
 @import 'partials/design/design';
+
+@media print {
+  @import "_print.scss";
+}
