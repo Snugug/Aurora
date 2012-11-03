@@ -1,0 +1,11 @@
+/**
+ * Page partials: Parts of site found in page.tpl.php.
+ */
+
+
+@import 'header';
+@import 'content';
+@import 'sidebar_first';
+@import 'sidebar_second';
+@import 'comment';
+@import 'footer';

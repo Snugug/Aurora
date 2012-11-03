@@ -1,0 +1,33 @@
+////////////////////////
+// Style File
+//
+// This file gets turned into style.css. This file should really
+//  hold nothing except for imports of your base, layout, and design
+//  partials, plus the mixins required to kickstart Aura and Style Guide.
+////////////////////////
+
+////////////////////////
+// Base Import
+////////////////////////
+@import 'partials/base/base';
+
+////////////////////////
+// Import Global Stylings
+////////////////////////
+@import 'partials/global/global';
+
+////////////////////////
+// Import Page Stylings
+////////////////////////
+@import 'partials/page/page';
+
+////////////////////////
+// Import Node Stylings
+////////////////////////
+@import 'partials/node/node';
+
+////////////////////////
+// Import View Stylings
+////////////////////////
+@import 'partials/view/view';
+
