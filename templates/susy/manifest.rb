@@ -1,12 +1,16 @@
 description "Aurora Base Theme"
+no_configuration_file!
+
+# Add in custom config file.
+file '../shared/config.rb.erb', :to => "config.rb", :erb => true
+
+# Add in README
+file '../shared/README-Sass.md', :to => 'README-Sass.md'
 
 # ERB ALL the Drupal files!
 file '../shared/aurora.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
 
 file '../shared/template.php.erb', :to => "template.php", :erb => true
-
-# Add in custom config file.
-file '../shared/config.rb.erb', :to => "config.rb.example", :erb => true
 
 # Stylesheets
 file '../shared/style.scss',  :like => :stylesheet, :media => 'screen, projection', :to => 'style.scss'
