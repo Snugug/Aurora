@@ -27,40 +27,33 @@ file '_defaults.scss',  :like => :stylesheet, :to => 'partials/global/_defaults.
 file '_forms.scss',  :like => :stylesheet, :to => 'partials/global/_forms.scss'
 file '_type.scss',  :like => :stylesheet, :to => 'partials/global/_type.scss'
 
-# Page-based partials: For site-structure-based content.
-file '_page.scss',  :like => :stylesheet, :to => 'partials/page/_page.scss'
-file '_header.scss',  :like => :stylesheet, :to => 'partials/page/_header.scss'
-file '_content.scss',  :like => :stylesheet, :to => 'partials/page/_content.scss'
-file '_sidebar_first.scss',  :like => :stylesheet, :to => 'partials/page/_sidebar_first.scss'
-file '_sidebar_second.scss',  :like => :stylesheet, :to => 'partials/page/_sidebar_second.scss'
-file '_comment.scss',  :like => :stylesheet, :to => 'partials/page/_comment.scss'
-file '_footer.scss',  :like => :stylesheet, :to => 'partials/page/_footer.scss'
+# Design partial: Just a place for design elements to be put in.
+file '_design.scss', :like => :stylesheet, :to => 'partials/design/_design.scss'
 
-# Node-base partials: For node-content types.
-file '_node.scss',  :like => :stylesheet, :to => 'partials/node/_node.scss'
-file '_basic_page.scss',  :like => :stylesheet, :to => 'partials/node/_basic_page.scss'
-
-# View-based partials: For specific views.
-file '_view.scss',  :like => :stylesheet, :to => 'partials/view/_view.scss'
-
-# Helpful read-mes for n00bs.
-file 'README_SASS.md',  :like => :stylesheet, :to => 'partials/README.md'
-file 'README_PARTIALS.md',  :like => :stylesheet, :to => 'README.md'
+# Add in READMEs for n00bs.
+file '../shared/README-Sass.md',  :like => :stylesheet, :to => 'README.md'
+file '../shared/README-Partials.md',  :like => :stylesheet, :to => 'partials/README.md'
 
 # JavaScript
 file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
 file '../shared/loader.js',           :like => :javascript, :to => 'loader.js'
 file '../shared/modernizr-2.5.3.js',  :like => :javascript, :to => 'modernizr-2.5.3.js'
 
-help %Q{
-  Please contact Sam Richard with questions:
+# Git
+file '../shared/gitignore.txt', :to => ".gitignore", :erb => true
 
-      sam@snug.ug
+# Template file folder
+file '../shared/README-templates.md', :to => "tpl/README.md", :erb => true
+
+help %Q{
+  Please contact Ian Carrico with questions:
+
+      ian@iancarrico.com
 }
 
 welcome_message %Q{
 
   Aurora Base Theme using Susy.
-  
+
 }
 
