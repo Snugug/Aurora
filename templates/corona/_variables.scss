@@ -1,11 +1,8 @@
-////////////////////////
 // Variables Partials
 //
 // All of your variables should go in this file.
-////////////////////////
 
 
-//
 // Legacy IE support
 //
 // These variables are used by many mixins to add additional CSS to support
@@ -13,18 +10,16 @@
 //
 // To turn on support for IE6 or IE7, set those variables to true.
 //
-// Zen does not require special handling for IE8 or later. But Compass uses that
-// variable for a couple edge cases. We include it for completeness sake. See
-// the documentation at http://compass-style.org/reference/compass/support/
+// These variables are used throughout compass, but specifically within the
+// compass-normalize extension.
+// /
 $legacy-support-for-ie6: false;
 $legacy-support-for-ie7: false;
 $legacy-support-for-ie8: true;
 
 
-//
 // Font faces, stacks and sizes.
 //
-
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
 // use in the normalize.scss file.
