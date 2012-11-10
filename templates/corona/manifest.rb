@@ -39,6 +39,12 @@ file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
 file '../shared/loader.js',           :like => :javascript, :to => 'loader.js'
 file '../shared/modernizr-2.5.3.js',  :like => :javascript, :to => 'modernizr-2.5.3.js'
 
+# Git
+file '../shared/gitignore.txt', :to => ".gitignore", :erb => true
+
+# Template file folder
+file '../shared/README-templates.md', :to => "tpl/README.md", :erb => true
+
 help %Q{
   Please contact Ian Carrico with questions:
 
