@@ -139,10 +139,9 @@ $show-grid-backgrounds  : false;
 // @see https://github.com/Snugug/respond-to/blob/master/README.md
 // @see https://github.com/canarymason/breakpoint/blob/master/README.markdown
 
-$breakpoints: 'smartphone' (300px),
-              'smartphone landscape' (480px),
-              'tablet' (768px),
-              'desktop' (980px),
-              'smartphone only' (320px 767px),
-              'smartphone landscape only' (480px 767px),
-              'tablet only' (768px 979px);
+// $sample-breakpoints: "small-ish" (300px),
+//                      "medium-ish" (460px),
+//                      "large-ish" (770px),
+//                      "extra-large-ish" (1000px);
+
+$breakpoints: '';
