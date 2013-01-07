@@ -5,6 +5,7 @@
 // We import normalize.css here, so that it inherets the variables already set.
 @import 'normalize';
 
+@import 'extendables';
 @import 'defaults';
 @import 'type';
 @import 'forms';
