@@ -19,13 +19,14 @@ file '_base.scss',  :like => :stylesheet, :to => 'partials/base/_base.scss'
 file '_variables.scss', :like => :stylesheet, :to => 'partials/base/_variables.scss'
 file '../shared/_functions.scss', :like => :stylesheet, :to => 'partials/base/_functions.scss'
 file '../shared/_mixins.scss', :like => :stylesheet, :to => 'partials/base/_mixins.scss'
-file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/base/_extendables.scss'
 
 # Global partials: Form elements, typeface, etc.
 file '_global.scss',  :like => :stylesheet, :to => 'partials/global/_global.scss'
+file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/global/_extendables.scss'
 file '_defaults.scss',  :like => :stylesheet, :to => 'partials/global/_defaults.scss'
 file '_forms.scss',  :like => :stylesheet, :to => 'partials/global/_forms.scss'
 file '_type.scss',  :like => :stylesheet, :to => 'partials/global/_type.scss'
+file '_system.scss',  :like => :stylesheet, :to => 'partials/global/_system.scss'
 
 # Design partial: Just a place for design elements to be put in.
 file '_design.scss', :like => :stylesheet, :to => 'partials/design/_design.scss'
@@ -36,8 +37,6 @@ file '../shared/README-Partials.md',  :like => :stylesheet, :to => 'partials/REA
 
 # JavaScript
 file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
-file '../shared/loader.js',           :like => :javascript, :to => 'loader.js'
-file '../shared/modernizr-2.5.3.js',  :like => :javascript, :to => 'modernizr-2.5.3.js'
 
 # Git
 file '../shared/gitignore.txt', :to => ".gitignore", :erb => true
