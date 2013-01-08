@@ -26,6 +26,7 @@ file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/globa
 file '_defaults.scss',  :like => :stylesheet, :to => 'partials/global/_defaults.scss'
 file '_forms.scss',  :like => :stylesheet, :to => 'partials/global/_forms.scss'
 file '_type.scss',  :like => :stylesheet, :to => 'partials/global/_type.scss'
+file '_system.scss',  :like => :stylesheet, :to => 'partials/global/_system.scss'
 
 # Design partial: Just a place for design elements to be put in.
 file '_design.scss', :like => :stylesheet, :to => 'partials/design/_design.scss'
