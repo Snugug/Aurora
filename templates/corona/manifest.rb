@@ -37,7 +37,6 @@ file '../shared/README-Partials.md',  :like => :stylesheet, :to => 'partials/REA
 
 # JavaScript
 file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
-file '../shared/loader.js',           :like => :javascript, :to => 'loader.js'
 
 # Git
 file '../shared/gitignore.txt', :to => ".gitignore", :erb => true

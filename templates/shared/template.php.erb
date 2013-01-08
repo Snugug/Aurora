@@ -12,7 +12,7 @@ function <%= project_name %>_preprocess_maintenance_page(&$vars, $hook) {
   // When a variable is manipulated or added in preprocess_html or
   // preprocess_page, that same work is probably needed for the maintenance page
   // as well, so we can just re-use those functions to do that work here.
-  <%= project_name %>_preprocess_html($variables, $hook);
+  // <%= project_name %>_preprocess_html($variables, $hook);
   // <%= project_name %>_preprocess_page($variables, $hook);
 
   // This preprocessor will also be used if the db is inactive. To ensure your
@@ -29,9 +29,9 @@ function <%= project_name %>_preprocess_maintenance_page(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
+/* -- Delete this line if you want to use this function
 function <%= project_name %>_preprocess_html(&$vars) {
-  // yep/nope for conditional JS loading!
-  drupal_add_js(drupal_get_path('theme', '<%= project_name %>') . '/<%= project_js %>/loader.js');
+
 }
 
 /**
