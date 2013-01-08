@@ -22,13 +22,12 @@ function <%= project_name %>_preprocess_maintenance_page(&$vars, $hook) {
 }
 
 /**
- * Implements hook_modernizr_load().
+ * Implements hook_modernizr_load_alter().
  *
  * @return
  *   An array to be output as yepnope testObjects.
  */
-function <%= project_name %>_modernizr_load() {
-  $load = array();
+function <%= project_name %>_modernizr_load_alter(&$load) {
 
   // We will check for touch events, and if we do load the hammer.js script.
   $load[] = array(
