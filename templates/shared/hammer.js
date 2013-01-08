@@ -584,7 +584,7 @@ function Hammer(element, options, undefined)
 
                 _mousedown = false;
                 _event_end = event;
-                
+
                 var dragging = _gesture == 'drag';
 
                 // swipe gesture
