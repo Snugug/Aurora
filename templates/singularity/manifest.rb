@@ -36,7 +36,6 @@ file '../shared/_print.scss',  :like => :stylesheet, :to => '_print.scss'
 
 # JavaScript
 file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
-file '../shared/loader.js',           :like => :javascript, :to => 'loader.js'
 
 # Behaviors
 file 'behaviors/box-sizing/boxsizing.htc'
