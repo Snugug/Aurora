@@ -34,8 +34,6 @@ file '../shared/_print.scss',  :like => :stylesheet, :to => '_print.scss'
 
 # JavaScript
 file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
-file '../shared/loader.js',           :like => :javascript, :to => 'loader.js'
-file '../shared/modernizr-2.5.3.js',  :like => :javascript, :to => 'modernizr-2.5.3.js'
 
 help %Q{
   Please contact Sam Richard with questions:
@@ -46,6 +44,6 @@ help %Q{
 welcome_message %Q{
 
   Aurora Base Theme using Susy.
-  
+
 }
 
