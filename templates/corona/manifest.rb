@@ -19,7 +19,7 @@ file '_base.scss',  :like => :stylesheet, :to => 'partials/base/_base.scss'
 file '_variables.scss', :like => :stylesheet, :to => 'partials/base/_variables.scss'
 file '../shared/_functions.scss', :like => :stylesheet, :to => 'partials/base/_functions.scss'
 file '../shared/_mixins.scss', :like => :stylesheet, :to => 'partials/base/_mixins.scss'
-file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/base/_extendables.scss'
+file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/global/_extendables.scss'
 
 # Global partials: Form elements, typeface, etc.
 file '_global.scss',  :like => :stylesheet, :to => 'partials/global/_global.scss'
