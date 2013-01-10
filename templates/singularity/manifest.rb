@@ -5,7 +5,9 @@ no_configuration_file!
 file '../shared/config.rb.erb', :to => "config.rb", :erb => true
 
 # Add in README
-file '../shared/README-Sass.md', :to => 'README-Sass.md'
+file '../shared/README-Sass.md',  :like => :stylesheet, :to => 'README.md'
+file '../shared/README-Partials.md',  :like => :stylesheet, :to => 'partials/README.md'
+file '../shared/README-templates.md', :to => "templates/README.md", :erb => true
 
 # ERB ALL the Drupal files!
 file '../shared/aurora.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
@@ -34,6 +36,7 @@ file '../shared/_print.scss',  :like => :stylesheet, :to => '_print.scss'
 
 # JavaScript
 file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
+file '../shared/loader.js',           :like => :javascript, :to => 'loader.js'
 
 # Behaviors
 file 'behaviors/box-sizing/boxsizing.htc'
