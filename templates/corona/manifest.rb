@@ -35,14 +35,17 @@ file '../shared/README-Sass.md',  :like => :stylesheet, :to => 'README.md'
 file '../shared/README-Partials.md',  :like => :stylesheet, :to => 'partials/README.md'
 file '../shared/README-templates.md', :to => "tpl/README.md", :erb => true
 
-# JavaScript
-file '../shared/hammer.js',           :like => :javascript, :to => 'hammer.js'
-
-# Git
-file '../shared/gitignore.txt', :to => ".gitignore", :erb => true
-
 # Template file folder
 file '../shared/README-templates.md', :to => "tpl/README.md", :erb => true
+
+# Bower Awesomesauce
+file '../shared/bowerrc', :to => '.bowerrc'
+file '../shared/component.json.erb', :to => 'component.json', :erb => true
+
+# Developer Consistency
+file '../shared/Gemfile', :to => 'Gemfile'
+file '../shared/editorconfig', :to => '.editorconfig'
+file '../shared/gitignore.txt', :to => ".gitignore"
 
 help %Q{
   Please contact Ian Carrico with questions:
@@ -51,8 +54,10 @@ help %Q{
 }
 
 welcome_message %Q{
+  Corona based Aurora Subtheme.
 
-  Aurora Base Theme using Susy.
+  Please run `bundle install` from inside your new subtheme to isntall the required dependenecies. This will create a Gemfile.lock file, add this to your version control.
 
+  When you are ready start compiling, run `bundle exec compass watch` instead of simply `compass watch` to ensure you are compiling using your dependent Compass extensions.
 }
 
