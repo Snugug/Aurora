@@ -4,20 +4,25 @@
 // These files will be shared across all three of your output
 //  CSS files. Generally included here are only Compass Extension
 //  imports and imports for variables, functions, mixins, and extendables.
+//
+// Toolkit imports all of Compass, so there is no need to import it separately.
 ////////////////////////
 
-////////////////////////
-// Compass Imports
+//////////////////////////////
+// CSS Resets
 //
-// Aurora includes @import 'compass' so you don't need to.
-////////////////////////
+// Choose your CSS Reset method:
+//  If you'd like a hard reset, uncomment `compass/reset`.
+//  If you'd prefer a soft reset, uncomment `compass-normalize`
+//////////////////////////////
+// @import 'compass/rest';
+// @import 'compass-normalize';
 
 ////////////////////////
 // Compass Extensions
-//
-// Aurora includes Toolkit, Breakpoint, Respond-to, Sassy Buttons
 ////////////////////////
-@import 'aurora';
+@import 'toolkit';
+@import 'sassy-buttons';
 
 ////////////////////////
 // Private Imports
