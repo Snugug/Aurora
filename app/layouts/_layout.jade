@@ -1,0 +1,40 @@
+include _header
+include _nav
+
+doctype 5
+//if lt IE9
+  <html class="no-js lte-ie8" lang='en'>
+//[if gte IE9]><!
+html.no-js(lang='en')
+  //<![endif]
+  head
+    title Aurora Documentation
+
+    link(rel="stylesheet", href="/styles/main.css", type="text/css")
+
+    script(src="/components/modernizr/modernizr.js")
+
+    //- - if (typekitID)
+    //-   mixin webfonts(typekitID, 'typekit')
+    //- - if (googleFonts)
+    //-   mixin webfonts(googleFonts, 'google')
+    //- each script in scriptsHead
+    //-   script(src=script)
+    //- block scripts-head
+
+  body
+    #header(class='page-wrapper')
+      header(class='content-wrapper')
+        block header
+    #nav(class='page-wrapper')
+      div(class='content-wrapper')
+        mixin nav
+        block nav
+    #main(class='page-wrapper')
+      main(class='content-wrapper')
+        block content
+    #footer(class='page-wrapper')
+      footer(class='content-wrapper')
+        block footer
+
+    script(src="/components/chibi/chibi-min.js")
