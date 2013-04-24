@@ -77,9 +77,12 @@ module.exports = function (grunt) {
             }]
         },
         jade: {
-	    app: {
+    	    app: {
                 options: {
-                    pretty: true
+                    pretty: true,
+                    data: {
+                        assetPath: ''
+                    }
                 },
                 files: [{
                     expand: true,
@@ -92,22 +95,26 @@ module.exports = function (grunt) {
                     ],
                     ext: '.html'
                 }]
-	    },
-	    dist: {
-		options: {
-		    pretty: true
-		},
-		files: [{
-		    expand: true,
-		    cwd: '<%= yeoman.app %>',
-		    dest: '<%= yeoman.dist %>',
-		    src: [
-			'{,**/}*.jade',
-			'!{,**/}setup/sections/{,**/}*.jade',
-			'!{,**/}setup/widgets/{,**/}*.jade'
-		    ],
-		    ext: '.html'
-		}]
+    	    },
+    	    dist: {
+        		options: {
+        		    pretty: true,
+                    data: {
+                        assetPath: '/Aurora'
+                    }
+        		},
+        		files: [{
+        		    expand: true,
+        		    cwd: '<%= yeoman.app %>',
+        		    dest: '<%= yeoman.dist %>',
+        		    src: [
+            			'{,**/}*.jade',
+                        '!{,**/}layouts/{,**/}*.jade',
+            			'!{,**/}setup/sections/{,**/}*.jade',
+            			'!{,**/}setup/widgets/{,**/}*.jade'
+        		    ],
+        		    ext: '.html'
+        		}]
             }
         },
         connect: {
