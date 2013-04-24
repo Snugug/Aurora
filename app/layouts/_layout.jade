@@ -10,9 +10,9 @@ html.no-js(lang='en')
   head
     title Aurora Documentation
 
-    link(rel="stylesheet", href="/styles/main.css", type="text/css")
+    link(rel="stylesheet", href="#{assetPath}/styles/main.css", type="text/css")
 
-    script(src="/components/modernizr/modernizr.js")
+    script(src="#{assetPath}/components/modernizr/modernizr.js")
 
     //- - if (typekitID)
     //-   mixin webfonts(typekitID, 'typekit')
@@ -37,4 +37,4 @@ html.no-js(lang='en')
       footer(class='content-wrapper')
         block footer
 
-    script(src="/components/chibi/chibi-min.js")
+    script(src="#{assetPath}/components/chibi/chibi-min.js")
