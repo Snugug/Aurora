@@ -39,12 +39,12 @@ file '../shared/README-templates.md', :to => "tpl/README.md", :erb => true
 file '../shared/README-templates.md', :to => "tpl/README.md", :erb => true
 
 # Bower Awesomesauce
-file '../shared/bowerrc', :to => '.bowerrc'
+file '../shared/bowerrc.txt', :to => '.bowerrc'
 file '../shared/component.json.erb', :to => 'component.json', :erb => true
 
 # Developer Consistency
-file '../shared/Gemfile', :to => 'Gemfile'
-file '../shared/editorconfig', :to => '.editorconfig'
+file '../shared/Gemfile.txt', :to => 'Gemfile'
+file '../shared/editorconfig.txt', :to => '.editorconfig'
 file '../shared/gitignore.txt', :to => ".gitignore"
 
 help %Q{

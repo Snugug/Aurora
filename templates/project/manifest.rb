@@ -32,12 +32,12 @@ file '../shared/_design.scss', :like => :stylesheet, :to => 'partials/design/_de
 file '../shared/print.scss',  :like => :stylesheet, :to => 'print.scss'
 
 # Bower Awesomesauce
-file '../shared/bowerrc', :to => '.bowerrc'
+file '../shared/bowerrc.txt', :to => '.bowerrc'
 file '../shared/component.json.erb', :to => 'component.json', :erb => true
 
 # Developer Consistency
-file '../shared/Gemfile', :to => 'Gemfile'
-file '../shared/editorconfig', :to => '.editorconfig'
+file '../shared/Gemfile.txt', :to => 'Gemfile'
+file '../shared/editorconfig.txt', :to => '.editorconfig'
 file '../shared/gitignore.txt', :to => ".gitignore"
 
 help %Q{
