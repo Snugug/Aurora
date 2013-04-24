@@ -29,6 +29,10 @@ GEM
       compass (~> 0.11)
     sassy-strings (0.3.1)
       compass (>= 0.12.2)
+    singularity-extras (0.0.3)
+      modular-scale (>= 1.0.6)
+      sassy-math (>= 1.5)
+      singularitygs (>= 0.0.1)
     singularitygs (1.0.7)
       breakpoint (>= 2.0.1)
       compass (>= 0.12.2)
@@ -52,4 +56,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  singularity-extras (~> 0.0.3)
   style-prototypes (~> 1.0)

@@ -5,3 +5,4 @@ source 'https://rubygems.org'
 
 # This is the gem containing all of the dependencies required for Style Prototypes
 gem 'style-prototypes', '~>1.0'
+gem 'singularity-extras', '~>0.0.3'
