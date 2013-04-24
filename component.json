@@ -1,0 +1,9 @@
+{
+  "name": "style-prototypes",
+  "version": "1.0.0",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "chibi": "git://github.com/kylebarrow/chibi.git"
+  },
+  "devDependencies": {}
+}
