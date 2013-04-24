@@ -1,0 +1,147 @@
+// Variables Partials
+//
+// All of your variables should go in this file.
+
+
+// Legacy IE support
+//
+// These variables are used by many mixins to add additional CSS to support
+// specific versions of IE or specific vendor prefixes.
+//
+// To turn on support for IE6 or IE7, set those variables to true.
+//
+// These variables are used throughout compass, but specifically within the
+// compass-normalize extension.
+// /
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+
+// Font faces, stacks and sizes.
+//
+// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+// rhythm for your entire page. You can see some of its mixins and functions in
+// use in the normalize.scss file.
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 2    * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.75 * $base-font-size;
+
+
+
+// The following font family declarations are based on the Microsoft core web
+// fonts which are common fonts available on most computer systems. The DejaVu
+// and Nimbus Sans fonts are commonly available on Linux systems where the MS
+// fonts are less common. Tahoma and Helvetica are also widely available.
+//
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// First, let's create some font stacks.
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+
+// Project-specific fonts
+// Put any font families here that are specific to your project.
+
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Now create some variables for the font stacks we want to use on this site.
+$base-font-family: $georgia; // The font family set on the html element.
+$font-body:        $verdana;
+$font-monospace:   $courier;
+$form-font-family: $arial;
+
+
+//
+// Colors, etc.
+//
+
+$white          : #FFFFFF;
+$black          : #000000;
+
+// Standard colors: for standard 4K and other brand colors.
+// Note: these are just for reference, and some brands have multiple colors.
+$color-facebook : #3B5998;
+$color-twitter  : #33CCFF;
+$color-youtube  : #FF3333;
+$color-pinterest: #990000;
+$color-skype    : #12A5F4;
+$color-flickr   : #FE0883;
+$color-foursquare: #8FD400;
+$color-instagram: #4E433C;
+$color-linkedin : #4875B4;
+$color-tumblr   : #2B4964;
+$color-vimeo    : #86B32D;
+$color-google   : #D6492C;
+$color-fk       : #66B360;
+
+
+// Base color variables.
+$link           : #2090B4;
+$visited        : $link;
+$selection-bg   : #66B360;
+$selection      : $white;
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 2em;
+
+
+// Add Susy responsive layout settings.
+//
+// Susy operates using just five variables listed here. By adjusting these
+// variables, you can instantly change your grid without touching any of
+// the details of your implementation.
+//
+// @see http://susy.oddbird.net/guides/reference/
+
+$total-columns          : 12;
+$column-width           : 4em;
+$gutter-width           : 1em;
+$grid-padding           : $gutter-width;
+
+$show-grid-backgrounds  : false;
+
+
+
+// Add respond-to settings.
+//
+// Respond-to allows us to embed media queries directly into each rule that
+// needs it, rather than forcing a developer to place rules for a single
+// component in multiple places depending on the media query they want to
+// affect.
+//
+// @see https://github.com/Snugug/respond-to
+//
+// Listed here are named breakpoints. They can vary in complexity, allowing you to
+// get rid of the cognitive load behind typing and remembering media queries.
+//
+// @see https://github.com/Snugug/respond-to/blob/master/README.md
+// @see https://github.com/canarymason/breakpoint/blob/master/README.markdown
+
+// $sample-breakpoints: "small-ish" (300px),
+//                      "medium-ish" (460px),
+//                      "large-ish" (770px),
+//                      "extra-large-ish" (1000px);
+
+$breakpoints: '';
