@@ -19,23 +19,9 @@ $legacy-support-for-ie8: true;
 
 
 // Font faces, stacks and sizes.
-//
-// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
-// rhythm for your entire page. You can see some of its mixins and functions in
-// use in the normalize.scss file.
-// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$base-font-size:   16px; // The font size set on the root html element.
-$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
-
-$h1-font-size: 2    * $base-font-size;
-$h2-font-size: 1.5  * $base-font-size;
-$h3-font-size: 1.17 * $base-font-size;
-$h4-font-size: 1    * $base-font-size;
-$h5-font-size: 0.83 * $base-font-size;
-$h6-font-size: 0.75 * $base-font-size;
-
-
+$base-font-size:   16px;
+$base-line-height: 24px;
 
 // The following font family declarations are based on the Microsoft core web
 // fonts which are common fonts available on most computer systems. The DejaVu
@@ -107,41 +93,45 @@ $selection      : $white;
 $indent-amount: 2em;
 
 
-// Add Susy responsive layout settings.
+// Add Singularity responsive layout settings.
 //
-// Susy operates using just five variables listed here. By adjusting these
-// variables, you can instantly change your grid without touching any of
-// the details of your implementation.
+// Singularity allows the creation of responsive grids within your site's layout
+// Go to the singularity github wiki for full implementation, and how to
+// integrate it with breakpoint as well.
 //
-// @see http://susy.oddbird.net/guides/reference/
+// @see https://github.com/Team-Sass/Singularity/wiki
 
-$total-columns          : 12;
-$column-width           : 4em;
-$gutter-width           : 1em;
-$grid-padding           : $gutter-width;
+$mobile-first         : true;
+$include-border-box   : false;
+$include-clearfix     : false;
 
-$show-grid-backgrounds  : false;
+$grids                : 12;
+$gutters              : 1/3;
 
 
 
-// Add respond-to settings.
+
+// Add breakpoint settings.
 //
-// Respond-to allows us to embed media queries directly into each rule that
+// Breakpoint allows us to embed media queries directly into each rule that
 // needs it, rather than forcing a developer to place rules for a single
 // component in multiple places depending on the media query they want to
 // affect.
 //
-// @see https://github.com/Snugug/respond-to
+// @see https://github.com/Team-Sass/breakpoint/wiki
 //
 // Listed here are named breakpoints. They can vary in complexity, allowing you to
 // get rid of the cognitive load behind typing and remembering media queries.
 //
-// @see https://github.com/Snugug/respond-to/blob/master/README.md
-// @see https://github.com/canarymason/breakpoint/blob/master/README.markdown
+// @see https://github.com/Team-Sass/breakpoint/wiki/Respond-To
 
 // $sample-breakpoints: "small-ish" (300px),
 //                      "medium-ish" (460px),
 //                      "large-ish" (770px),
 //                      "extra-large-ish" (1000px);
+
+
+$breakpoint-no-query-fallbacks: true;
+$breakpoint-to-ems: true;
 
 $breakpoints: '';

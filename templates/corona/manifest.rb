@@ -50,7 +50,7 @@ file '../shared/gitignore.txt', :to => ".gitignore"
 help %Q{
   Please contact Ian Carrico with questions:
 
-      ian@iancarrico.com
+      github@iancarrico.com
 }
 
 welcome_message %Q{
