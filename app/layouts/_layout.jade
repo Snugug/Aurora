@@ -12,6 +12,8 @@ html.no-js(lang='en')
 
     link(rel="stylesheet", href="#{assetPath}/styles/main.css", type="text/css")
 
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
     script(src="#{assetPath}/components/modernizr/modernizr.js")
 
     //- - if (typekitID)
@@ -26,6 +28,8 @@ html.no-js(lang='en')
     #header(class='page-wrapper')
       header(class='content-wrapper')
         block header
+    #aurora-wrapper(class="page-wrapper")
+      canvas#aurora-canvas
     #nav(class='page-wrapper')
       div(class='content-wrapper')
         mixin nav
@@ -38,3 +42,4 @@ html.no-js(lang='en')
         block footer
 
     script(src="#{assetPath}/components/chibi/chibi-min.js")
+    script(src="#{assetPath}/scripts/aurora.js")

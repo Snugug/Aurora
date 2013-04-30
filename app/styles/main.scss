@@ -5,5 +5,30 @@
 body {
   margin: 0;
   padding: 0;
-  // background: blue;
+  background: #000;
+
+  color: #eee;
+}
+
+#header {
+  color: #333;
+}
+
+.content-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+#aurora-wrapper {
+  position: relative;
+}
+
+#aurora-canvas {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -100;
 }

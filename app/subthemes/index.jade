@@ -1,0 +1,36 @@
+extends ../layouts/_layout
+
+block header
+  mixin header("Subthemes")
+
+block content
+  article
+    section
+      h1 Subthemes
+
+      :markdown
+        Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is done through Compass. Aurora subthemes come in two different flavors, [Aurora](#aurora-subtheme) and Corona. Type either of the following into your command line, replacing `<my_theme>` with the machine name of your theme:
+
+        **For the Aurora flavor**
+        ```bash
+        compass create <my_theme> -r aurora --using aurora
+        ```
+
+        ** For the Corona flavor**
+        ```bash
+        compass create <my_theme> -r aurora --using aurora/corona
+        ```
+
+        Once you have your subtheme created, you need to install its [Bundler](http://gembundler.com/) dependencies. Aurora makes use of Bundler to ensure the gems you are working with are always the correct version that you mean to use. This allows you to update your gems at will and use newer versions of gems on newer projects while keeping your older projects at the proper versions. To install the dependencies, `cd` into your theme's directory from the command line and run the following:
+
+        ```bash
+        bundle install
+        ```
+
+        This will create a `Gemfile.lock` file, which should be committed to your version control system. If you ever want to update the versions of the gems you are using, update their version numbers in the supplied `Gemfile` and run `bundle install` again.
+
+    section
+      h2#aurora-subtheme Aurora
+
+    section
+      h2#corona-subtheme Corona
