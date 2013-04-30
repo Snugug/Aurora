@@ -3,50 +3,62 @@ description =  <%= project_name %> theme based on the Aurora base theme.
 core = 7.x
 base theme = aurora
 
-; Stylesheets
-stylesheets[all][] = <%= project_css %>/style.css
-
+; ========================================
 ; Regions
-regions[header]         = Header
-regions[main_prefix]    = Main Region Prefix
-regions[highlighted]    = Highlighted
-regions[help]           = Help
-regions[content]        = Content
-regions[sidebar_first]  = Primary Sidebar
-regions[sidebar_second] = Secondary Sidebar
-regions[main_suffix]    = Main Region Suffix
-regions[footer]         = Footer
+; ========================================
 
-; THEME OPTIONS
+regions[header]       = 'Header'
+regions[main_prefix]  = 'Main Region Prefix'
+regions[content]      = 'Main Region'
+regions[main_suffix]  = 'Main Region Suffix'
+regions[footer]       = 'Footer'
 
-; Chrome Frame Options
-settings[aurora_enable_chrome_frame] = 1
-settings[aurora_min_ie_support] = 10
+; ========================================
+; Stylesheets
+; ========================================
 
-; Miscelaneous Options
-settings[aurora_remove_core_css] = 0
-settings[aurora_html_tags] = 1
-settings[aurora_typekit_id] = 0
+stylesheets[all][0] = 'css/style.css'
+stylesheets[all][1] = 'components/formalize/assets/css/formalize.css'
 
-; JavaScript Options
-settings[aurora_footer_js] = 1
-settings[aurora_libraries_head] = 0
+; ========================================
+; Scripts
+; ========================================
 
-; Toggle Display
-settings[toggle_logo] = 1
-settings[toggle_name] = 1
-settings[toggle_slogan] = 0
-settings[toggle_node_user_picture] = 0
-settings[toggle_comment_user_picture] = 0
-settings[toggle_comment_user_verification] = 1
-settings[toggle_favicon] = 1
-settings[toggle_breadcrumbs] = 0
+scripts[0] = 'components/formalize/assets/js/jquery.formalize.min.js'
 
-; Development Options
-settings[aurora_rebuild_registry] = 1
-settings[aurora_livereload] = 0
-settings[aurora_viewport_width] = 1
-settings[aurora_modernizr_debug] = 1
+; ========================================
+; Modernizr
+; ========================================
 
-; Experimental Options
-settings['aurora_custom_js_handling'] = 0
+
+; ========================================
+; Settings
+; ========================================
+
+settings[toggle_node_user_picture] = '1'
+settings[toggle_comment_user_picture] = '1'
+settings[toggle_comment_user_verification] = '1'
+settings[default_logo] = '1'
+settings[logo_path] = ''
+settings[logo_upload] = ''
+settings[default_favicon] = '1'
+settings[favicon_path] = ''
+settings[favicon_upload] = ''
+settings[hide_recomended_modules] = '0'
+settings[aurora_enable_chrome_frame] = '1'
+settings[aurora_min_ie_support] = '10'
+settings[aurora_html_tags] = '1'
+settings[aurora_typekit_id] = '0'
+settings[aurora_livereload] = '0'
+settings[magic_embedded_mqs] = '0'
+settings[magic_css_excludes] = ''
+settings[magic_footer_js] = '0'
+settings[magic_library_head] = '0'
+settings[magic_experimental_js] = '0'
+settings[magic_js_excludes] = ''
+settings[magic_rebuild_registry] = '0'
+settings[magic_viewport_indicator] = '0'
+settings[magic_modernizr_debug] = '0'
+settings[magic_performance__active_tab] = 'edit-dev'
+settings[magic_css_excludes_regex] = ''
+settings[magic_js_excludes_regex] = ''
