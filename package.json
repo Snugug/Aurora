@@ -24,7 +24,7 @@
     "matchdep": "~0.1.1",
     "grunt-contrib-jade": "~0.5.0",
     "grunt-parallel": "0.0.3",
-    "markdown": "0.4.0"
+    "marked": "~0.2.8"
   },
   "engines": {
     "node": ">=0.8.0"
