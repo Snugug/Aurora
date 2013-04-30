@@ -1,0 +1,74 @@
+<!DOCTYPE html><!--[if lt IE9]><html class="no-js lte-ie8" lang='en'><![endif]-->
+<!--[if gte IE9]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <title>Aurora Documentation</title>
+    <link rel="stylesheet" href="/Aurora/styles/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/Aurora/components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div id="header" class="page-wrapper">
+      <header class="content-wrapper">
+        <h1>Aurora Documentation</h1>
+        <aside id="page-id">
+          <h2 class="section-name">Install</h2>
+          <div class="page-info">
+            <p>Version 7.x-3.0</p>
+          </div>
+        </aside>
+      </header>
+    </div>
+    <div id="aurora-wrapper" class="page-wrapper">
+      <canvas id="aurora-canvas"></canvas>
+    </div>
+    <div id="nav" class="page-wrapper">
+      <div class="content-wrapper">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/" title="Home">Home</a></li>
+            <li><a href="/install" title="Install">Install</a></li>
+            <li><a href="/subthemes" title="Subthemes">Subthemes</a></li>
+            <li><a href="/sass" title="Sass">Sass</a></li>
+            <li><a href="/features" title="Features">Features</a></li>
+            <li><a href="/modules" title="Companion Modules">Companion Modules</a></li>
+            <li><a href="/roadmap" title="Roadmap">Roadmap</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div id="main" class="page-wrapper">
+      <main class="content-wrapper">
+        <article>
+          <section>
+            <h1>Installation</h1><p>Unlike most Drupal modules and themes, Aurora is very specifically designed to work with and rely upon third party tools in order to function. Because of this, Aurora has some dependencies that you need to resolve before getting to work</p>
+
+          </section>
+          <section>
+            <h2>Drupal</h2><p>Aurora is a base theme, so be sure to <a href="http://drupal.org/project/aurora">install Aurora from Drupal.org</a>. You will also need to install the <a href="http://drupal.org/project/magic">Magic</a> module as many of features that make Aurora great have been moved to that module in order to make them generic enough for everyone to use them. We also highly encourage you install the <a href="http://drupal.org/project/html5_tools">HTML5 Tools</a> module.</p>
+
+          </section>
+          <section>
+            <h2>Sass+Compass</h2><p>Aurora is deeply integrated with Sass and Compass, so in order to use Aurora, you need to have the both installed. Sass and Compass are Ruby projects, so you&#39;re going to need to ensure your machine is running Ruby as well. If you do not have them installed, here are instructions for <a href="http://snugug.com/musings/installing-sass-and-compass-across-all-platform">installing Sass and Compass across all platforms</a>.</p>
+<p><strong>Aurora requires you to use the Command Line to compile Sass. You cannot use a GUI based Sass tool like CodeKit or Compass.app.</strong> This is because Aurora relies upon Compass Extensions and the Bundler gem, neither of which are available through GUI tools. The command line isn&#39;t scary, I promise.</p>
+<p>After you have Sass+Compass installed, you are going to need to install the Compass Aurora gem. Doing so is easy, from your command line, type the following, including <code>sudo</code> if need be:</p>
+<pre><code class="lang-bash">gem install compass-aurora</code></pre>
+
+          </section>
+          <section>
+            <h3>Bower</h3><p><a href="http://bower.io/">Bower</a> is &quot;a package manager for the web&quot;, allowing you to easily manage many front-end tools for your projects. Out of the box, Aurora allows you to take advantage of this by including and setting up some basic configuration for Bower&#39;s <code>component.json</code> and <code>.bowerrc</code> files. While not a necessity for Aurora&#39;s usage, we highly encourage you to use Bower. The first thing you must do to install Bower is to [install Node.js]. Once you have Node.js installed, installing Bower is easy, simply type the following into your command line:</p>
+<pre><code class="lang-bash">npm install -g bower</code></pre>
+
+          </section>
+        </article>
+      </main>
+    </div>
+    <div id="footer" class="page-wrapper">
+      <footer class="content-wrapper">
+      </footer>
+    </div>
+    <script src="/Aurora/components/chibi/chibi-min.js"></script>
+    <script src="/Aurora/scripts/aurora.js"></script>
+  </body>
+</html>

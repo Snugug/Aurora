@@ -1,0 +1,71 @@
+<!DOCTYPE html><!--[if lt IE9]><html class="no-js lte-ie8" lang='en'><![endif]-->
+<!--[if gte IE9]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <title>Aurora Documentation</title>
+    <link rel="stylesheet" href="/Aurora/styles/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/Aurora/components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div id="header" class="page-wrapper">
+      <header class="content-wrapper">
+        <h1>Aurora Documentation</h1>
+        <aside id="page-id">
+          <h2 class="section-name">Subthemes</h2>
+          <div class="page-info">
+            <p>Version 7.x-3.0</p>
+          </div>
+        </aside>
+      </header>
+    </div>
+    <div id="aurora-wrapper" class="page-wrapper">
+      <canvas id="aurora-canvas"></canvas>
+    </div>
+    <div id="nav" class="page-wrapper">
+      <div class="content-wrapper">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/" title="Home">Home</a></li>
+            <li><a href="/install" title="Install">Install</a></li>
+            <li><a href="/subthemes" title="Subthemes">Subthemes</a></li>
+            <li><a href="/sass" title="Sass">Sass</a></li>
+            <li><a href="/features" title="Features">Features</a></li>
+            <li><a href="/modules" title="Companion Modules">Companion Modules</a></li>
+            <li><a href="/roadmap" title="Roadmap">Roadmap</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div id="main" class="page-wrapper">
+      <main class="content-wrapper">
+        <article>
+          <section>
+            <h1>Subthemes</h1><p>Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is done through Compass. Aurora subthemes come in two different flavors, <a href="#aurora-subtheme">Aurora</a> and Corona. Type either of the following into your command line, replacing <code>&lt;my_theme&gt;</code> with the machine name of your theme:</p>
+<p><strong>For the Aurora flavor</strong></p>
+<pre><code class="lang-bash">compass create &lt;my_theme&gt; -r aurora --using aurora</code></pre>
+<p><strong> For the Corona flavor</strong></p>
+<pre><code class="lang-bash">compass create &lt;my_theme&gt; -r aurora --using aurora/corona</code></pre>
+<p>Once you have your subtheme created, you need to install its <a href="http://gembundler.com/">Bundler</a> dependencies. Aurora makes use of Bundler to ensure the gems you are working with are always the correct version that you mean to use. This allows you to update your gems at will and use newer versions of gems on newer projects while keeping your older projects at the proper versions. To install the dependencies, <code>cd</code> into your theme&#39;s directory from the command line and run the following:</p>
+<pre><code class="lang-bash">bundle install</code></pre>
+<p>This will create a <code>Gemfile.lock</code> file, which should be committed to your version control system. If you ever want to update the versions of the gems you are using, update their version numbers in the supplied <code>Gemfile</code> and run <code>bundle install</code> again.</p>
+
+          </section>
+          <section>
+            <h2 id="aurora-subtheme">Aurora</h2>
+          </section>
+          <section>
+            <h2 id="corona-subtheme">Corona</h2>
+          </section>
+        </article>
+      </main>
+    </div>
+    <div id="footer" class="page-wrapper">
+      <footer class="content-wrapper">
+      </footer>
+    </div>
+    <script src="/Aurora/components/chibi/chibi-min.js"></script>
+    <script src="/Aurora/scripts/aurora.js"></script>
+  </body>
+</html>

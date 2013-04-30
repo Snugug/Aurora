@@ -5,6 +5,7 @@
   <head>
     <title>Aurora Documentation</title>
     <link rel="stylesheet" href="/Aurora/styles/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/Aurora/components/modernizr/modernizr.js"></script>
   </head>
   <body>
@@ -19,11 +20,20 @@
         </aside>
       </header>
     </div>
+    <div id="aurora-wrapper" class="page-wrapper">
+      <canvas id="aurora-canvas"></canvas>
+    </div>
     <div id="nav" class="page-wrapper">
       <div class="content-wrapper">
         <nav class="main-nav">
           <ul>
             <li><a href="/" title="Home">Home</a></li>
+            <li><a href="/install" title="Install">Install</a></li>
+            <li><a href="/subthemes" title="Subthemes">Subthemes</a></li>
+            <li><a href="/sass" title="Sass">Sass</a></li>
+            <li><a href="/features" title="Features">Features</a></li>
+            <li><a href="/modules" title="Companion Modules">Companion Modules</a></li>
+            <li><a href="/roadmap" title="Roadmap">Roadmap</a></li>
           </ul>
         </nav>
       </div>
@@ -31,7 +41,8 @@
     <div id="main" class="page-wrapper">
       <main class="content-wrapper">
         <article>
-          <h1>Aurora Documentation</h1>
+          <h1>Aurora</h1><p>Aurora is an HTML5, <a href="http://sass-lang.com">Sass</a> and <a href="http://compass-style.org">Compass</a> powered minimalist base theme. It is optimized for both responsive and mobile first web design. Built to encourage best modern front end practices, Aurora comes with <a href="http://bower.io/">Bower</a>, <a href="http://livereload.com/">LiveReload</a>, <a href="https://developers.google.com/chrome/chrome-frame/">Google Chrome Frame</a>, and <a href="https://typekit.com/">Typekit</a> integrations, with <a href="http://gruntjs.com/">Grunt</a> integration on the near-term roadmap. It also suggests and recommends Drupal modules to get the most out of both Aurora and out of Drupal. All of the optimizations and integrations in Aurora are designed to be there only when you need them and get out of your way when you don&#39;t.</p>
+
         </article>
       </main>
     </div>
@@ -40,5 +51,6 @@
       </footer>
     </div>
     <script src="/Aurora/components/chibi/chibi-min.js"></script>
+    <script src="/Aurora/scripts/aurora.js"></script>
   </body>
 </html>
