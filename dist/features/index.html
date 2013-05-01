@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if lt IE9]><html class="no-js lte-ie8" lang='en'><![endif]-->
+<!--[if gte IE9]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <title>Aurora Documentation</title>
+    <link rel="stylesheet" href="/Aurora/styles/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/Aurora/components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div id="header" class="page-wrapper">
+      <header class="content-wrapper">
+        <h1>Aurora Documentation</h1>
+        <aside id="page-id">
+          <h2 class="section-name">Features</h2>
+          <div class="page-info">
+            <p>Version 7.x-3.0</p>
+          </div>
+        </aside>
+      </header>
+    </div>
+    <div id="aurora-wrapper" class="page-wrapper">
+      <canvas id="aurora-canvas"></canvas>
+    </div>
+    <div id="nav" class="page-wrapper">
+      <div class="content-wrapper">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/" title="Home">Home</a></li>
+            <li><a href="/install" title="Install">Install</a></li>
+            <li><a href="/subthemes" title="Subthemes">Subthemes</a></li>
+            <li><a href="/sass" title="Sass">Sass</a></li>
+            <li><a href="/features" title="Features">Features</a></li>
+            <li><a href="/modules" title="Companion Modules">Companion Modules</a></li>
+            <li><a href="/roadmap" title="Roadmap">Roadmap</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div id="main" class="page-wrapper">
+      <main class="content-wrapper">
+        <article>
+          <section>
+            <h1>Features</h1><p>Aurora has a handful of useful features allowing you to get up and theming quickly. Many of the features from Aurora 2.x have been moved to the <a href="http://drupal.org/project/magic">Magic module</a>, so be sure to install Magic to get the most out of Aurora.</p>
+<h2>HTML5 Templates</h2>
+<p>Aurora comes with many of Drupal&#39;s default templates updated to use the proper HTML5 syntaxes as well as proper ARIA roles. It also comes with an HTML5 Figure layout for <a href="http://drupal.org/project/ds">Display Suite</a> and an HTML5 Sections layout for <a href="http://drupal.org/project/panels">Panels</a> which is a fork of the Flexible layout, but only allowing for rows, thus allowing for source ordering and grouping. The Panels Sections layout produces much cleaner default HTML than then Flexible layout, and you can edit the attributes of the output by calling <code>hook_aurora_layout_attributes_alter(&amp;$attributes)</code>.</p>
+<h2>Internet Explorer Support</h2>
+<p>Old Internet Explorer support is a pain. Aurora comes with a couple of ways of making it easier. A dropdown menu allows you to choose your minimum supported IE version, which will add an <code>.lt-ie{version}</code> to your HTML for versions of IE less than your supported version of IE. A checkbox will also allow you to enable or disable <a href="https://www.youtube.com/watch?v=sjW0Bchdj-w&amp;feature=player_embedded">Google Chrome Frame</a>, which itself is wrapped to display only below your minimum supported version of IE.</p>
+<h2>Development Options</h2>
+<p>A simple checkbox will add or remove the <a href="http://livereload.com/">LiveReload</a> JavaScript snippet, allowing you to have your site automatically reload on changes. This is very useful for designing in browser. Currently, you need LiveReload set up, it is on our <a href="../roadmap">roadmap</a> to get rid of this need.</p>
+<h2>Typekit Integration</h2>
+<p>We love web fonts, yes we do! We love web fonts, how &#39;bout you?! Aurora comes with built-in support for <a href="https://typekit.com/">Typekit</a>. Simply add your Typekit&#39;s Kit ID into the Typekit settings and Aurora automatically adds in the advanced, asymmetric font loading code for your kit.</p>
+<h2>Miscellaneous</h2>
+<p>Aurora also has an option to prune your <code>&lt;style&gt;</code>, <code>&lt;link&gt;</code>, and <code>&lt;script&gt;</code> tags as suggested by <a href="http://sonspring.com/journal/html5-in-drupal-7#_pruning">Nathan Smith</a>.</p>
+
+          </section>
+        </article>
+      </main>
+    </div>
+    <div id="footer" class="page-wrapper">
+      <footer class="content-wrapper">
+      </footer>
+    </div>
+    <script src="/Aurora/components/chibi/chibi-min.js"></script>
+    <script src="/Aurora/scripts/aurora.js"></script>
+  </body>
+</html>
