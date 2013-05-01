@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="/Aurora/styles/main.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/Aurora/components/modernizr/modernizr.js"></script>
+    <script>
+      (function() {
+        var config = {
+          kitId: 'tys4qqu',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+      
+    </script>
   </head>
   <body>
     <div id="header" class="page-wrapper">
@@ -32,7 +42,7 @@
             <li><a href="/subthemes" title="Subthemes">Subthemes</a></li>
             <li><a href="/sass" title="Sass">Sass</a></li>
             <li><a href="/features" title="Features">Features</a></li>
-            <li><a href="/modules" title="Companion Modules">Companion Modules</a></li>
+            <li><a href="/modules" title="Modules">Modules</a></li>
             <li><a href="/roadmap" title="Roadmap">Roadmap</a></li>
           </ul>
         </nav>
@@ -52,5 +62,13 @@
     </div>
     <script src="/Aurora/components/chibi/chibi-min.js"></script>
     <script src="/Aurora/scripts/aurora.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-30577396-2', 'github.io');
+        ga('send', 'pageview');
+    </script>
   </body>
 </html>
