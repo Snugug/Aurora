@@ -14,7 +14,7 @@ html.no-js(lang='en')
 
     meta(name="viewport", content="width=device-width, initial-scale=1")
 
-    script(src="#{assetPath}/components/modernizr/modernizr.js")
+    //- script(src="#{assetPath}/scripts/modernizr.js")
 
     script
       (function() {
@@ -46,12 +46,16 @@ html.no-js(lang='en')
     #main(class='page-wrapper')
       main(class='content-wrapper')
         block content
-    #footer(class='page-wrapper')
-      footer(class='content-wrapper')
-        block footer
+    //- #footer(class='page-wrapper')
+    //-   footer(class='content-wrapper')
+    //-     block footer
 
-    script(src="#{assetPath}/components/chibi/chibi-min.js")
-    script(src="#{assetPath}/scripts/aurora.js")
+    - if (assetPath == "/Aurora") {
+      script(src="#{assetPath}/scripts/main.js")
+    -} else {
+      script(src="#{assetPath}/components/chibi/chibi-min.js")
+      script(src="#{assetPath}/scripts/aurora.js")
+    -}
 
     //- Google Analytics Tracking Code
     script
