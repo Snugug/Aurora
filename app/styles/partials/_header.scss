@@ -1,5 +1,7 @@
 #header {
   background: #fef9ef;
+
+  @include box-shadow(0 0 2em rgba(black, 1), inset -1px -1px .75em rgba(black, .75));
   @include clearfix;
 
   h1 {
