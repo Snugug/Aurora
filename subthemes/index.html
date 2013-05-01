@@ -50,7 +50,8 @@
 <p>Once you have your subtheme created, you need to install its <a href="http://gembundler.com/">Bundler</a> dependencies. Aurora makes use of Bundler to ensure the gems you are working with are always the correct version that you mean to use. This allows you to update your gems at will and use newer versions of gems on newer projects while keeping your older projects at the proper versions. To install the dependencies, <code>cd</code> into your theme&#39;s directory from the command line and run the following:</p>
 <pre><code class="lang-bash">bundle install</code></pre>
 <p>This will create a <code>Gemfile.lock</code> file, which should be committed to your version control system. If you ever want to update the versions of the gems you are using, update their version numbers in the supplied <code>Gemfile</code> and run <code>bundle install</code> again.</p>
-<p>While doing so is discouraged, if you need to support IE&lt;8, you may find it beneficial to install the <code>box-sizing: border-box</code> behavior</p>
+<p>While doing so is discouraged, if you need to support IE&lt;8, you may find it beneficial to install the <code>box-sizing: border-box</code> behavior. From the command line:</p>
+<pre><code class="lang-bash">compass install aurora/box-sizing</code></pre>
 
           </section>
           <section>
