@@ -42,7 +42,7 @@
       <main class="content-wrapper">
         <article>
           <section>
-            <h1>Subthemes</h1><p>Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is done through Compass. Aurora subthemes come in two different flavors, <a href="#aurora-subtheme">Aurora</a> and Corona. Type either of the following into your command line, replacing <code>&lt;my_theme&gt;</code> with the machine name of your theme:</p>
+            <h1>Subthemes</h1><p>Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is done through Compass. Aurora subthemes come in two different flavors, <a href="#aurora-subtheme">Aurora</a> and [Corona](#corona-subtheme. Type either of the following into your command line, replacing <code>&lt;my_theme&gt;</code> with the machine name of your theme:</p>
 <p><strong>For the Aurora flavor</strong></p>
 <pre><code class="lang-bash">compass create &lt;my_theme&gt; -r aurora --using aurora</code></pre>
 <p><strong> For the Corona flavor</strong></p>
@@ -50,6 +50,7 @@
 <p>Once you have your subtheme created, you need to install its <a href="http://gembundler.com/">Bundler</a> dependencies. Aurora makes use of Bundler to ensure the gems you are working with are always the correct version that you mean to use. This allows you to update your gems at will and use newer versions of gems on newer projects while keeping your older projects at the proper versions. To install the dependencies, <code>cd</code> into your theme&#39;s directory from the command line and run the following:</p>
 <pre><code class="lang-bash">bundle install</code></pre>
 <p>This will create a <code>Gemfile.lock</code> file, which should be committed to your version control system. If you ever want to update the versions of the gems you are using, update their version numbers in the supplied <code>Gemfile</code> and run <code>bundle install</code> again.</p>
+<p>While doing so is discouraged, if you need to support IE&lt;8, you may find it beneficial to install the <code>box-sizing: border-box</code> behavior</p>
 
           </section>
           <section>
