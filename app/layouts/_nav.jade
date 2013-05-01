@@ -9,4 +9,4 @@ mixin nav(items, navClass, ulClass)
     ul(class=ulClass)
       each link, title in items
         li
-          a(href="/#{link}", title=title) #{title}
+          a(href="#{assetPath}/#{link}", title=title) #{title}
