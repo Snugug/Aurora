@@ -1,0 +1,52 @@
+extends ../layouts/_layout
+
+block header
+  mixin header("Companion Modules")
+
+block content
+  article
+    section
+      h1 Companion Modules
+
+      :markdown
+        In addition to what comes with Aurora, there are a handful of modules that we believe should be used in conjunction with Aurora to get the most out of your Drupal front end development and responsive theming efforts. They are divided up into Required and Suggested modules.
+
+        ## Required Modules
+
+        These modules should be absolutely installed on your site in order for Aurora to preform at its best.
+
+        ### [Magic Module](http://drupal.org/project/magic)
+
+        The Magic module provides advanced CSS and JavaScript handling for themes. It provides additional handling for CSS and JavaScript, as well as allows you to selectively remove files. It also provides development enhancements to make theming easier.
+
+        ### [HTML5 Tools](http://drupal.org/project/html5_tools)
+
+        HTML5 Tools is a module that allows Drupal sites to be built using HTML5 ... smartly. It includes features for creating cleaner and leaner markup, providing HTML5 elements for use in fields, and streamlining CSS and JavaScript tags, amongst many other improvements.
+
+        ## Suggested Modules
+
+        These modules we recommend installing in order to enhance your theming and development process.
+
+        ### [jQuery Update](http://drupal.org/project/jquery_update)
+
+        jQuery Update will update the jQuery code base on your site from Drupal's base version 1.4. It will also allow jQuery to be loaded from a CDN, for added performance.
+
+        ### [Modernizr Module](http://drupal.org/project/modernizr)
+
+        The Modernizr module will add in the [Modernizr](http://modernizr.com) library of code to better help theme development and provide hooks for your theme and modules to define their dependencies.
+
+        ### [Blockify](http://drupal.org/project/blockify)
+
+        Blockify allows you to use system information traditionally kept in page.tpl.php, such as Site Name, Tabs, Messages, Logo, etc…, as blocks. Aurora does not include these items in its page.tpl.php, so if you would like to use them, you should use this module.
+
+        ### [Borealis Suite](http://drupal.org/project/borealis)
+
+        Borealis provides two modules that make building responsive sites better. Borealis Responsive Images is an innovative, Drupal centric approach to responsive images. Borealis Semantic Blocks allows you to choose the semantics of blocks, making their output CSS much nicer.
+
+        ### [Fences](http://drupal.org/project/fences)
+
+        The Fences Module is a an easy-to-use tool to specify an HTML element for each field. This element choice will propagate everywhere the field is used, such as teasers, RSS feeds and Views. You don't have to keep re-configuring the same HTML element over and over again every time you display the field. Best of all, Fences provides leaner markup than Drupal 7 core! And can get rid of the extraneous classes too!
+
+        ### [Panels](http://drupal.org/project/panels)
+
+        The Panels module, especially when coupled with <a href=\"http://drupal.org/project/ctools\">CTool's</a> Page Manager module and Aurora's HTML5 Sections Panels layout, provides an excellent combination of tools for working with source order for the content area of your site.
