@@ -1,0 +1,20 @@
+extends ../layouts/_layout
+
+block header
+  mixin header("Roadmap")
+
+block content
+  article
+    section
+      h1 Roadmap
+
+      :markdown
+        We are looking to keep Aurora as up-to-date with current front-end best practices, as such, you should expect Aurora development to move much faster than you may typically be use to. This also means it's possible that we will be introducing breaking backwards-incompatible changes faster than you are use to or releasing features inaccessible to older versions of Aurora. Each time a breaking backwards-incompatible changes is made, we will create a new full version number for both the Drupal.org project and the Compass Extension gem. We also cannot guarantee that there will be easy upgrade paths from one major version to the next. We will always keep the latest release for Aurora one version back available, but we will not necessarily fully support it.
+
+        With that in mind, we are presenting here a rough roadmap of expected updates and additions to Aurora over the course of this version and the next major version.
+
+        ## Aurora 7.x-3.x
+
+        * [Grunt.js](http://gruntjs.com/) integration for new subthemes to enable better development pipeline, including native live reloading
+          * Currently blocked [this pull request](https://github.com/gruntjs/grunt-contrib-livereload/pull/32), plus testing
+        * Helpful mixins for Drupal specifically, available to all 7.x-3.x users on Compass Extension update, once build.
