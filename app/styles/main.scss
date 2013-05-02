@@ -9,12 +9,24 @@ body {
 
   color: #eee;
 
-  font-family: "nimbus-sans", sans-serif;
+  .wf-inactive & {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  }
+  .wf-nimbussans-n3-active & {
+    font-family: "nimbus-sans";
+  }
+
   font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6, #nav a {
-  font-family: "brandon-grotesque", serif;
+
+  .wf-inactive & {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  }
+  .wf-brandongrotesque-n7-active & {
+    font-family: "brandon-grotesque";
+  }
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -27,6 +39,13 @@ h1, h2, h3, h4, h5, h6, #nav a {
   max-width: 1024px;
   margin: 0 auto;
   padding: 1em;
+
+  opacity: 1;
+  @include single-transition(opacity, 1s);
+
+  .wf-loading & {
+    opacity: 0;
+  }
 }
 
 #aurora-wrapper {
