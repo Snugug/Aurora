@@ -22,14 +22,6 @@ file '../shared/_mixins.scss', :like => :stylesheet, :to => 'partials/base/_mixi
 
 file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/global/_extendables.scss'
 
-# Bower's for the Birds
-file '../shared/bowerrc.txt', :to => '.bowerrc'
-file '../shared/component.json.erb', :to => 'component.json', :erb => true
-
-# Grunt's for the Boars
-file '../shared/Gruntfile.js', :to => 'Gruntfile.js'
-file '../shared/package.json.erb', :to => 'package.json', :erb => true
-
 # Developer Consistency
 file '../shared/Gemfile.txt', :to => 'Gemfile'
 file '../shared/editorconfig.txt', :to => '.editorconfig'
