@@ -1,0 +1,14 @@
+<% project_name = File.basename(Compass.configuration.project_path) %><% project_js = Compass.configuration.javascripts_dir %><% project_css = Compass.configuration.css_dir %>
+{
+  "name": "<%= project_name%>",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-contrib-compass": "~0.1.2"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
