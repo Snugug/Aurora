@@ -114,8 +114,20 @@ a {
 }
 
 main.content-wrapper {
-  font-size: 1.5em;
+
   line-height: 1.618em;
+
+  font-size: 1em;
+
+  @include breakpoint(447px) {
+    font-size: 1.25em;
+  }
+
+  @include breakpoint(576px) {
+    font-size: 1.5em;
+  }
+
+
 }
 
 pre {
