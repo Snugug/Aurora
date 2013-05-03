@@ -33,10 +33,17 @@ h1, h2, h3, h4, h5, h6, #nav a {
 
 #header {
   color: #333;
+
+  .wf-inactive & {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  }
+  .wf-brandongrotesque-n7-active & {
+    font-family: "brandon-grotesque";
+  }
 }
 
 .content-wrapper {
-  max-width: 1024px;
+  max-width: 822px;
   margin: 0 auto;
   padding: 1em;
 
@@ -63,6 +70,10 @@ h1, h2, h3, h4, h5, h6, #nav a {
 
 #nav {
   // @include horizontal-list;
+  @include clearfix;
+  text-align: center;
+
+  margin-top: -.3em;
 
   font-size: 2em;
 
@@ -70,16 +81,19 @@ h1, h2, h3, h4, h5, h6, #nav a {
     color: #f2006f;
     text-shadow: 3px 2px 0px shade(#f2006f, 90%);
 
+    margin: {
+      left: .8em;
+      right: .8em;
+      top: .15em;
+      bottom: .15em;
+    }
+    display: inline-block;
+
 
     &:hover {
       color: tint(#f2006f, 50%);
       // text-shadow: 3px 2px 0px shade(#f2006f, 40%);
     }
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
   }
 
 }
@@ -92,5 +106,47 @@ a {
 
   &:hover {
     color: tint(#ffa100, 50%);
+  }
+}
+
+.page-info {
+  margin-top: -1em;
+}
+
+main.content-wrapper {
+  font-size: 1.5em;
+  line-height: 1.618em;
+}
+
+pre {
+  font-weight: 300;
+  // width: 100%;
+
+  // p & {
+  //   width: auto;
+  // }
+
+  .wf-inactive & {
+    font-family: monospace;
+  }
+  .wf-sourcecodepro-n3-active & {
+    font-family: "source-code-pro";
+  }
+}
+
+code {
+  background: #333;
+  border-radius: 3px;
+
+  p & {
+    padding-left: .25em;
+    padding-right: .25em;
+  }
+
+  &[class^="lang"] {
+    width: 100%;
+    display: block;
+    padding: .25em .5em;
+    @include box-shadow(inset 0 0 .5em rgba(black, 1));
   }
 }
