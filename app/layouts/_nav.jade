@@ -1,12 +1,9 @@
 - var sections = {"Home": "", "Install": "install", "Subthemes": "subthemes", "Sass": "sass", "Features": "features", "Modules": "modules", "Roadmap": "roadmap"}
 
-mixin nav(items, navClass, ulClass)
+mixin nav(items, navClass)
   - items = items || sections
   - navClass = navClass || "main-nav"
-  - ulClass = ulClass || false
 
   nav(class=navClass)
-    ul(class=ulClass)
-      each link, title in items
-        li
-          a(href="#{assetPath}/#{link}", title=title) #{title}
+    each link, title in items
+      a(href="#{assetPath}/#{link}", title=title) #{title}
