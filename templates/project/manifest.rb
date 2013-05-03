@@ -15,25 +15,20 @@ file '../shared/aurora.info.erb', :to => "#{options[:project_name] || File.basen
 file '../shared/template.php.erb', :to => "template.php", :erb => true
 
 # Stylesheets
-file '../shared/style.scss',  :like => :stylesheet, :media => 'all', :to => 'style.scss'
+discover :stylesheets
 
-file '_base.scss',  :like => :stylesheet, :to => 'partials/global/_base.scss'
 file '../shared/_variables.scss', :like => :stylesheet, :to => 'partials/global/_variables.scss'
 file '../shared/_functions.scss', :like => :stylesheet, :to => 'partials/global/_functions.scss'
 file '../shared/_mixins.scss', :like => :stylesheet, :to => 'partials/global/_mixins.scss'
 file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/global/_extendables.scss'
 
-file '../shared/_style-guide.scss', :like => :stylesheet, :to => 'partials/styleguide/_style-guide.scss'
-
-file '../shared/_layout.scss', :like => :stylesheet, :to => 'partials/layout/_layout.scss'
-
-file '../shared/_design.scss', :like => :stylesheet, :to => 'partials/design/_design.scss'
-
-file '../shared/print.scss',  :like => :stylesheet, :to => 'print.scss'
-
-# Bower Awesomesauce
+# Bower's for the Birds
 file '../shared/bowerrc.txt', :to => '.bowerrc'
 file '../shared/component.json.erb', :to => 'component.json', :erb => true
+
+# Grunt's for the Boars
+file '../shared/Gruntfile.js', :to => 'Gruntfile.js'
+file '../shared/package.json.erb', :to => 'package.json', :erb => true
 
 # Developer Consistency
 file '../shared/Gemfile.txt', :to => 'Gemfile'
@@ -49,7 +44,11 @@ help %Q{
 welcome_message %Q{
   Aurora Subtheme.
 
-  Please run `bundle install` from inside your new subtheme to isntall the required dependenecies. This will create a Gemfile.lock file, add this to your version control.
+  See http://snugug.github.io/Aurora/ for full documentation.
+
+  Please run `bundle install` from inside your new subtheme to install the required dependencies. This will create a Gemfile.lock file, add this to your version control.
 
   When you are ready start compiling, run `bundle exec compass watch` instead of simply `compass watch` to ensure you are compiling using your dependent Compass extensions.
+
+  Alternatively, if you are using Grunt, simply run `grunt watch` to compile and start LiveReload.
 }
