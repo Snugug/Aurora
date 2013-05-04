@@ -11,16 +11,12 @@ block content
       :markdown
         Unlike most Drupal modules and themes, Aurora is very specifically designed to work with and rely upon third party tools in order to function. Because of this, Aurora has some dependencies that you need to resolve before getting to work
 
-    section
-      h2 Drupal
+        ## Drupal
 
-      :markdown
         Aurora is a base theme, so be sure to [install Aurora from Drupal.org](http://drupal.org/project/aurora). You will also need to install the [Magic](http://drupal.org/project/magic) module as many of features that make Aurora great have been moved to that module in order to make them generic enough for everyone to use them. We also highly encourage you install the [HTML5 Tools](http://drupal.org/project/html5_tools) module.
 
-    section
-      h2 Sass+Compass
+        ## Sass+Compass
 
-      :markdown
         Aurora is deeply integrated with Sass and Compass, so in order to use Aurora, you need to have the both installed. Sass and Compass are Ruby projects, so you're going to need to ensure your machine is running Ruby as well. If you do not have them installed, here are instructions for [installing Sass and Compass across all platforms](http://snugug.com/musings/installing-sass-and-compass-across-all-platform).
 
         **Aurora requires you to use the Command Line to compile Sass. You cannot use a GUI based Sass tool like CodeKit or Compass.app.** This is because Aurora relies upon Compass Extensions and the Bundler gem, neither of which are available through GUI tools. The command line isn't scary, I promise.
@@ -31,12 +27,22 @@ block content
         gem install compass-aurora
         ```
 
-    section
-      h3 Bower
+        ## Advanced Features
 
-      :markdown
-        [Bower](http://bower.io/) is "a package manager for the web", allowing you to easily manage many front-end tools for your projects. Out of the box, Aurora allows you to take advantage of this by including and setting up some basic configuration for Bower's `component.json` and `.bowerrc` files. While not a necessity for Aurora's usage, we highly encourage you to use Bower. The first thing you must do to install Bower is to [install Node.js]. Once you have Node.js installed, installing Bower is easy, simply type the following into your command line:
+        Aurora comes with optional advanced functionality via integration with Bower and Grunt. Both require Node.js, so if you'd like to use them, [go install Node.js](http://nodejs.org/).
+
+        ### Bower
+
+        [Bower](http://bower.io/) is "a package manager for the web", allowing you to easily manage many front-end tools for your projects. Installing Bower is easy, simply type the following into your command line:
 
         ```bash
         npm install -g bower
+        ```
+
+        ### Grunt
+
+        [Grunt](http://gruntjs.com/) is a JavaScript Task Runner that allows you to easily automate common tasks. "The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it, a task runner can do most of that mundane work for you—and your team—with basically zero effort.". Installing Grunt is easy, simply type the following into your command line:
+
+        ```bash
+        npm install -g grunt-cli
         ```

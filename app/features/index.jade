@@ -6,7 +6,7 @@ block header
 block content
   article
     section
-      h1 Features
+      h1 Basic Features
 
       :markdown
         Aurora has a handful of useful features allowing you to get up and theming quickly. Many of the features from Aurora 2.x have been moved to the [Magic module](http://drupal.org/project/magic), so be sure to install Magic to get the most out of Aurora.
@@ -21,7 +21,7 @@ block content
 
         ## Development Options
 
-        A simple checkbox will add or remove the [LiveReload](http://livereload.com/) JavaScript snippet, allowing you to have your site automatically reload on changes. This is very useful for designing in browser. Currently, you need LiveReload set up, it is on our [roadmap](../roadmap) to get rid of this need.
+        A select box will allow you to add the [LiveReload](http://livereload.com/) JavaScript snippet to all of your pages, allowing you to have your site automatically reload on changes. This is very useful for designing in browser.
 
         ## Typekit Integration
 
@@ -30,3 +30,52 @@ block content
         ## Miscellaneous
 
         Aurora also has an option to prune your `<style>`, `<link>`, and `<script>` tags as suggested by [Nathan Smith](http://sonspring.com/journal/html5-in-drupal-7#_pruning).
+
+    section
+      h1 Advanced Features
+
+      :markdown
+        Aurora comes with some advanced features that you need to install separately if you would like to use. These features will greatly improve your development experience, so we encourage you to use them.
+
+        ## Bower
+
+        If you would like to take advantage of Bower integration, first make sure you have [installed Bower](../install), then from your command line, type the following in:
+
+        ```bash
+        compass install aurora/bower
+        ```
+
+        This will install a `components.json` file as well as a `.bowerrc` file to allow you to use Bower out of the box. Aurora's provided `components.json` includes a [Formalize](http://formalize.me/) dependency for added normalization across browsers. To install it, from your command line, type the following in:
+
+        ```bash
+        bower install
+        ```
+
+        ## Grunt
+
+        If you would like to take advantage of the Grunt integration, first make sure you have [installed Grunt](../install), then from your command line, type the following in:
+
+        ```bash
+        compass install aurora/grunt
+        ```
+
+        This will install a `Gruntfile.js` file as well as a `package.json` file to manage your Grunt dependencies. The build of Grunt will watch for changes to your Sass files and will also run a LiveReload server for you automatically! To take advantage of the Grunt LiveReload server, set your LiveReload setting to `Aurora Default Port`.
+
+        To install the Grunt dependencies, from your command line, type the following in:
+
+        ```bash
+        npm install
+        ```
+
+        Then, when you're ready to work, type the following in to your command line instead of `bundle exec compass watch`:
+
+        ```bash
+        grunt watch
+        ```
+
+        If you need to do a one-off build of your Sass, from your command line, type the following in:
+
+        ```bash
+        grunt build
+        ```
+

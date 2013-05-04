@@ -9,7 +9,7 @@ block content
       h1 Subthemes
 
       :markdown
-        Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is done through Compass. Aurora subthemes come in two different flavors, [Aurora](#aurora-subtheme) and [Corona](#corona-subtheme). Type either of the following into your command line, replacing `<my_theme>` with the machine name of your theme:
+        Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is done through Compass. Aurora subthemes come in three different flavors, [Aurora](#aurora-subtheme), [Corona](#corona-subtheme), and [Polaris](#polaris-subtheme). Type one of the following into your command line, replacing `<my_theme>` with the machine name of your theme:
 
         **For the Aurora flavor**
         ```bash
@@ -19,6 +19,11 @@ block content
         ** For the Corona flavor**
         ```bash
         compass create <my_theme> -r aurora --using aurora/corona
+        ```
+
+        ** For the Polaris flavor**
+        ```bash
+        compass create <my_theme> -r aurora --using aurora/polaris
         ```
 
         Once you have your subtheme created, you need to install its [Bundler](http://gembundler.com/) dependencies. Aurora makes use of Bundler to ensure the gems you are working with are always the correct version that you mean to use. This allows you to update your gems at will and use newer versions of gems on newer projects while keeping your older projects at the proper versions. To install the dependencies, `cd` into your theme's directory from the command line and run the following:
@@ -38,5 +43,17 @@ block content
     section
       h2#aurora-subtheme Aurora
 
+      :markdown
+        The Aurora subtheme flavor is the original partial structure built for the theme. The partial structure consists of four parts; a global folder for partials that can be used across multiple output files but do not inherently write CSS, a style guide folder for building a style guide, a layout folder for holding layouts, and a design partial for holding styling. The basic philosophy of this partial structure is to build a style guide, then theme your site while keeping layout and design separate.
+
     section
       h2#corona-subtheme Corona
+
+      :markdown
+        The Corona subtheme flavor is a partial structure designed to get out of your way and theme. It has very little structure to it, a base folder for partials that can be used across multiple output files but do not inherently write CSS, a global folder for styles that affect the whole site, and a design folder for holding your general designs.
+
+    section
+      h2#polaris-subtheme Polaris
+
+      :markdown
+        The Polaris subtheme flavor is a partial structure designed for ease of use with [SMACSS](https://smacss.com/). The partial structure consists of five parts; a global folder for partials that can be used across multiple output files but do not inherently write CSS, a style guide folder for building a style guide, a layouts folder for holding your SMACSS layouts, a modules folder for holding your SMACSS modules, and a states folder for holding different state styles. This partial structure differs from the one described in the book, but is much more usable in the real world.
