@@ -4,6 +4,7 @@ no_configuration_file!
 # Grunt's for the Boars
 file '../shared/Gruntfile.js', :to => 'Gruntfile.js'
 file '../shared/package.json.erb', :to => 'package.json', :erb => true
+file '../shared/jshintrc.txt', :to => '.jshintrc'
 
 help %Q{
   Please contact Sam Richard with questions:
