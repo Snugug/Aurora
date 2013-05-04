@@ -8,5 +8,5 @@ Compass::Frameworks.register('aurora', :path => extension_path)
 
 module Aurora
   VERSION = "3.0.0"
-  DATE = "2013-05-03"
+  DATE = "2013-05-04"
 end
