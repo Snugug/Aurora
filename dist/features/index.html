@@ -65,13 +65,15 @@
 <h2>Grunt</h2>
 <p>If you would like to take advantage of the Grunt integration, first make sure you have <a href="../install">installed Grunt</a>, then from your command line, type the following in:</p>
 <pre><code class="lang-bash">compass install aurora/grunt</code></pre>
-<p>This will install a <code>Gruntfile.js</code> file as well as a <code>package.json</code> file to manage your Grunt dependencies. The build of Grunt will watch for changes to your Sass files and will also run a LiveReload server for you automatically! To take advantage of the Grunt LiveReload server, set your LiveReload setting to <code>Aurora Default Port</code>.</p>
+<p>This will install a <code>Gruntfile.js</code> file as well as a <code>package.json</code> file to manage your Grunt dependencies. The build of Grunt Aurora comes with handles a handful of very useful functions depending on whether you <code>watch</code> or <code>build</code>.</p>
 <p>To install the Grunt dependencies, from your command line, type the following in:</p>
 <pre><code class="lang-bash">npm install</code></pre>
-<p>Then, when you&#39;re ready to work, type the following in to your command line instead of <code>bundle exec compass watch</code>:</p>
+<h3>Watch Task</h3>
 <pre><code class="lang-bash">grunt watch</code></pre>
-<p>If you need to do a one-off build of your Sass, from your command line, type the following in:</p>
+<p>While you&#39;re developing, it&#39;s useful to have your Sass compile on the fly and reload your browser. The watch task will automatically compile your Sass files for you, including running everything through <code>bundle exec</code>, will <a href="http://jshint.com/">JSHint</a> your JavaScript files for you, run a LiveReload server, and reload your browser for you whenever your Sass or JavaScript changes! To take advantage of the Grunt LiveReload server, set your LiveReload setting to <code>Aurora Default Port</code>.</p>
+<h3>Build Task</h3>
 <pre><code class="lang-bash">grunt build</code></pre>
+<p>When you&#39;re ready for production, it&#39;s time to get your files in tip-top shape. The build task will compile your Sass for production, run your images through <a href="http://optipng.sourceforge.net/">OptiPNG</a> and <a href="http://jpegclub.org/jpegtran/">jpegtran</a> to optimize them, ensure your Sass image paths are pointing to the optimized images (assuming you&#39;re using <code>image-url</code>), and give your JavaScript one final pass through JSHint.</p>
 
           </section>
         </article>
