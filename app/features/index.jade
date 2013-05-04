@@ -59,7 +59,7 @@ block content
         compass install aurora/grunt
         ```
 
-        This will install a `Gruntfile.js` file as well as a `package.json` file to manage your Grunt dependencies. The build of Grunt will watch for changes to your Sass files and will also run a LiveReload server for you automatically! To take advantage of the Grunt LiveReload server, set your LiveReload setting to `Aurora Default Port`.
+        This will install a `Gruntfile.js` file as well as a `package.json` file to manage your Grunt dependencies. The build of Grunt Aurora comes with handles a handful of very useful functions depending on whether you `watch` or `build`.
 
         To install the Grunt dependencies, from your command line, type the following in:
 
@@ -67,15 +67,18 @@ block content
         npm install
         ```
 
-        Then, when you're ready to work, type the following in to your command line instead of `bundle exec compass watch`:
+        ### Watch Task
 
         ```bash
         grunt watch
         ```
 
-        If you need to do a one-off build of your Sass, from your command line, type the following in:
+        While you're developing, it's useful to have your Sass compile on the fly and reload your browser. The watch task will automatically compile your Sass files for you, including running everything through `bundle exec`, will [JSHint](http://jshint.com/) your JavaScript files for you, run a LiveReload server, and reload your browser for you whenever your Sass or JavaScript changes! To take advantage of the Grunt LiveReload server, set your LiveReload setting to `Aurora Default Port`.
+
+        ### Build Task
 
         ```bash
         grunt build
         ```
 
+        When you're ready for production, it's time to get your files in tip-top shape. The build task will compile your Sass for production, run your images through [OptiPNG](http://optipng.sourceforge.net/) and [jpegtran](http://jpegclub.org/jpegtran/) to optimize them, ensure your Sass image paths are pointing to the optimized images (assuming you're using `image-url`), and give your JavaScript one final pass through JSHint.
