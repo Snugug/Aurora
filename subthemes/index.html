@@ -42,11 +42,13 @@
       <main class="content-wrapper">
         <article>
           <section>
-            <h1>Subthemes</h1><p>Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is done through Compass. Aurora subthemes come in two different flavors, <a href="#aurora-subtheme">Aurora</a> and <a href="#corona-subtheme">Corona</a>. Type either of the following into your command line, replacing <code>&lt;my_theme&gt;</code> with the machine name of your theme:</p>
+            <h1>Subthemes</h1><p>Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is done through Compass. Aurora subthemes come in three different flavors, <a href="#aurora-subtheme">Aurora</a>, <a href="#corona-subtheme">Corona</a>, and <a href="#polaris-subtheme">Polaris</a>. Type one of the following into your command line, replacing <code>&lt;my_theme&gt;</code> with the machine name of your theme:</p>
 <p><strong>For the Aurora flavor</strong></p>
 <pre><code class="lang-bash">compass create &lt;my_theme&gt; -r aurora --using aurora</code></pre>
 <p><strong> For the Corona flavor</strong></p>
 <pre><code class="lang-bash">compass create &lt;my_theme&gt; -r aurora --using aurora/corona</code></pre>
+<p><strong> For the Polaris flavor</strong></p>
+<pre><code class="lang-bash">compass create &lt;my_theme&gt; -r aurora --using aurora/polaris</code></pre>
 <p>Once you have your subtheme created, you need to install its <a href="http://gembundler.com/">Bundler</a> dependencies. Aurora makes use of Bundler to ensure the gems you are working with are always the correct version that you mean to use. This allows you to update your gems at will and use newer versions of gems on newer projects while keeping your older projects at the proper versions. To install the dependencies, <code>cd</code> into your theme&#39;s directory from the command line and run the following:</p>
 <pre><code class="lang-bash">bundle install</code></pre>
 <p>This will create a <code>Gemfile.lock</code> file, which should be committed to your version control system. If you ever want to update the versions of the gems you are using, update their version numbers in the supplied <code>Gemfile</code> and run <code>bundle install</code> again.</p>
@@ -55,10 +57,16 @@
 
           </section>
           <section>
-            <h2 id="aurora-subtheme">Aurora</h2>
+            <h2 id="aurora-subtheme">Aurora</h2><p>The Aurora subtheme flavor is the original partial structure built for the theme. The partial structure consists of four parts; a global folder for partials that can be used across multiple output files but do not inherently write CSS, a style guide folder for building a style guide, a layout folder for holding layouts, and a design partial for holding styling. The basic philosophy of this partial structure is to build a style guide, then theme your site while keeping layout and design separate.</p>
+
           </section>
           <section>
-            <h2 id="corona-subtheme">Corona</h2>
+            <h2 id="corona-subtheme">Corona</h2><p>The Corona subtheme flavor is a partial structure designed to get out of your way and theme. It has very little structure to it, a base folder for partials that can be used across multiple output files but do not inherently write CSS, a global folder for styles that affect the whole site, and a design folder for holding your general designs.</p>
+
+          </section>
+          <section>
+            <h2 id="polaris-subtheme">Polaris</h2><p>The Polaris subtheme flavor is a partial structure designed for ease of use with <a href="https://smacss.com/">SMACSS</a>. The partial structure consists of five parts; a global folder for partials that can be used across multiple output files but do not inherently write CSS, a style guide folder for building a style guide, a layouts folder for holding your SMACSS layouts, a modules folder for holding your SMACSS modules, and a states folder for holding different state styles. This partial structure differs from the one described in the book, but is much more usable in the real world.</p>
+
           </section>
         </article>
       </main>
