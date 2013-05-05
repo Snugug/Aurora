@@ -2,7 +2,7 @@ description "Aurora Grunt Configuration"
 no_configuration_file!
 
 # Grunt's for the Boars
-file '../shared/Gruntfile.js', :to => 'Gruntfile.js'
+file '../shared/Gruntfile.js.erb', :to => 'Gruntfile.js', :erb => true
 file '../shared/package.json.erb', :to => 'package.json', :erb => true
 file '../shared/jshintrc.txt', :to => '.jshintrc'
 
