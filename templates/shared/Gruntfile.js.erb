@@ -1,4 +1,4 @@
-'use strict';
+<% project_name = File.basename(Compass.configuration.project_path) %><% project_js = Compass.configuration.javascripts_dir %><% project_css = Compass.configuration.css_dir %><% project_sass = Compass.configuration.sass_dir %><% project_img = Compass.configuration.images_dir %>'use strict';
 
 module.exports = function (grunt) {
 
@@ -8,11 +8,11 @@ module.exports = function (grunt) {
         livereload: 9001
       },
       css: {
-        files: ['sass/{,**/}*.scss'],
+        files: ['<%= project_sass %>/{,**/}*.scss'],
         tasks: ['compass:dev']
       },
       js: {
-        files: ['js/{,**/}*.js'],
+        files: ['<%= project_js %>/{,**/}*.js'],
         tasks: ['jshint']
       }
     },
@@ -24,12 +24,13 @@ module.exports = function (grunt) {
       },
       dev: {
         options: {
-          imagesDir: 'images'
+          environment: 'development',
         }
       },
       dist: {
         options: {
-          imagesDir: 'images-min',
+          environment: 'production',
+          imagesDir: '<%= project_img %>-min',
           force: true
         }
       }
@@ -39,7 +40,7 @@ module.exports = function (grunt) {
       options: {
         jshintrc: '.jshintrc'
       },
-      all: ['js/{,**/}*.js']
+      all: ['<%= project_js %>/{,**/}*.js']
     },
 
     imagemin: {
@@ -49,9 +50,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'images',
+          cwd: '<%= project_img %>',
           src: ['**/*.png', '**/*.jpg'],
-          dest: 'images-min/'
+          dest: '<%= project_img %>-min/'
         }]
       }
     },
