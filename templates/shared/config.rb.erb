@@ -1,4 +1,4 @@
-<% project_name = File.basename(Compass.configuration.project_path) %><% project_js = Compass.configuration.javascripts_dir %><% project_css = Compass.configuration.css_dir %><% project_sass = Compass.configuration.sass_dir %><% project_img = Compass.configuration.images_dir %># Require any additional compass plugins here.
+<% project_name = File.basename(Compass.configuration.project_path) %><% project_js = Compass.configuration.javascripts_dir %><% project_css = Compass.configuration.css_dir %><% project_sass = Compass.configuration.sass_dir %><% project_img = Compass.configuration.images_dir %><% project_fonts = Compass.configuration.fonts_dir %># Require any additional compass plugins here.
 require 'aurora'
 
 # Set this to the root of your project when deployed:
@@ -7,39 +7,23 @@ css_dir = "<%= project_css %>"
 sass_dir = "<%= project_sass %>"
 images_dir = "<%= project_img %>"
 javascripts_dir = "<%= project_js %>"
-fonts_dir = "fonts"
+fonts_dir = "<%= project_fonts %>"
 
-# To enable relative paths to assets via compass helper functions. Since Drupal
-# themes can be installed in multiple locations, we don't need to worry about
-# the absolute path to the theme from the server root.
+# To enable relative paths to assets via compass helper functions. Since Drupal themes can be installed in multiple locations, we shouldn't need to worry about the absolute path to the theme from the server root.
 relative_assets = true
 
-# To disable debugging comments that display the original location of your selectors. Uncomment:
+# To enable debugging comments that display the original location of your selectors. Comment:
 line_comments = false
-
-# Assuming this theme is in sites/*/themes/THEMENAME, you can add the partials
-# included with a module by uncommenting and modifying one of the lines below:
-#add_import_path "../../../default/modules/FOO"
-#add_import_path "../../../all/modules/FOO"
-#add_import_path "../../../../modules/FOO"
-
-# If you prefer the indented syntax, you might want to regenerate this
-# project again passing --syntax sass, or you can uncomment this:
-# preferred_syntax = :sass
-# and then run:
-# sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
 # Change this to :production when ready to deploy the CSS to the live server.
 environment = :development
-#environment = :production
 
-# In development, we can turn on the debug_info to use with FireSass or Chrome Web Inspector.
-debug = false
-#debug = true
+# In development, we can turn on the debug_info to use with FireSass or Chrome Web Inspector. Uncomment:
+# debug = true
 
-##
+##############################
 ## You probably don't need to edit anything below this.
-##
+##############################
 
 # Disable cache busting on image assets
 asset_cache_buster :none
