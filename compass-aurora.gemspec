@@ -30,4 +30,5 @@ Gem::Specification.new do |s|
   s.add_dependency("sassy-buttons",     [">= 0.1.4"])
   s.add_dependency("compass-normalize", [">= 1.4.3"])
   s.add_dependency("bundler",           [">= 1.3.5"])
+  s.add_dependency("css_parser",        [">= 1.3.4"])
 end
