@@ -17,14 +17,18 @@ regions[footer]       = 'Footer'
 ; Stylesheets
 ; ========================================
 
-stylesheets[all][0] = 'css/style.css'
-stylesheets[all][1] = 'components/formalize/assets/css/formalize.css'
+stylesheets[all][] = '<%= project_css %>/style.css'
+stylesheets[print][] = '<%= project_css %>/print.css'
+
+; If installed through Bower
+; stylesheets[all][] = 'components/formalize/assets/css/formalize.css'
 
 ; ========================================
 ; Scripts
 ; ========================================
 
-scripts[0] = 'components/formalize/assets/js/jquery.formalize.min.js'
+; If installed through Bower
+; scripts[] = 'components/formalize/assets/js/jquery.formalize.min.js'
 
 ; ========================================
 ; Modernizr
