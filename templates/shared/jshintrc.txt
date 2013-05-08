@@ -2,11 +2,12 @@
     "browser": true,
     "bitwise": true,
     "devel": true,
-    "camelcase": true,
     "curly": true,
     "eqeqeq": true,
+    "forin": true,
     "immed": true,
     "indent": 2,
+    "jquery": true,
     "latedef": true,
     "newcap": true,
     "noarg": true,
@@ -15,5 +16,9 @@
     "undef": true,
     "unused": true,
     "trailing": true,
-    "smarttabs": true
+    "smarttabs": true,
+    "predef": [
+        "Drupal",
+        "Modernizr"
+    ]
 }
