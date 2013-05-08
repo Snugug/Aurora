@@ -12,8 +12,11 @@ module.exports = function (grunt) {
         tasks: ['compass:dev']
       },
       js: {
-        files: ['<%= project_js %>/{,**/}*.js'],
-        tasks: ['jshint']
+        files: [
+          '<%= project_js %>/{,**/}*.js',
+          '!<%= project_js %>/{,**/}*.js'
+        ],
+        tasks: ['jshint', 'uglify:dev']
       }
     },
 
@@ -57,10 +60,51 @@ module.exports = function (grunt) {
       }
     },
 
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= project_img %>',
+          src: '**/*.svg',
+          dest: '<%= project_img %>-min'
+        }]
+      }
+    },
+
+    uglify: {
+      dev: {
+        options: {
+          mangle: false,
+          compress: false,
+          beautify: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= project_js %>',
+          src: ['**/*.js', '!**/*.min.js'],
+          dest: '<%= project_js %>',
+          ext: '.min.js'
+        }]
+      },
+      dist: {
+        options: {
+          mangle: true,
+          compress: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= project_js %>',
+          src: ['**/*.js', '!**/*.min.js'],
+          dest: '<%= project_js %>',
+          ext: '.min.js'
+        }]
+      }
+    },
+
     parallel: {
       assets: {
         grunt: true,
-        tasks: ['compass:dist', 'imagemin']
+        tasks: ['compass:dist', 'imagemin', 'svgmin', 'uglify:dist']
       }
     }
   });
@@ -78,6 +122,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-parallel');
+  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('build', [
     'parallel:assets',
