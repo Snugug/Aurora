@@ -43,7 +43,10 @@ module.exports = function (grunt) {
       options: {
         jshintrc: '.jshintrc'
       },
-      all: ['<%= project_js %>/{,**/}*.js']
+      all: [
+        '<%= project_js %>/{,**/}*.js',
+        '!<%= project_js %>/{,**/}*.min.js'
+      ]
     },
 
     imagemin: {
@@ -104,7 +107,7 @@ module.exports = function (grunt) {
     parallel: {
       assets: {
         grunt: true,
-        tasks: ['compass:dist', 'imagemin', 'svgmin', 'uglify:dist']
+        tasks: ['imagemin', 'svgmin', 'uglify:dist']
       }
     }
   });
@@ -127,6 +130,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'parallel:assets',
+    'compass:dist',
     'jshint'
   ]);
 };
