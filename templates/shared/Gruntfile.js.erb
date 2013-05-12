@@ -7,9 +7,18 @@ module.exports = function (grunt) {
       options: {
         livereload: 9001
       },
-      css: {
+      sass: {
         files: ['<%= project_sass %>/{,**/}*.scss'],
-        tasks: ['compass:dev']
+        tasks: ['compass:dev'],
+        options: {
+          livereload: false
+        }
+      },
+      css: {
+        files: ['<%= project_css %>/{,**/}*.css']
+      },
+      images: {
+        files: ['<%= project_img %>/**']
       },
       js: {
         files: [
@@ -104,10 +113,23 @@ module.exports = function (grunt) {
       }
     },
 
+    copy: {
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= project_img %>',
+            src: ['**', '!**/*.svg', '!**/*.png', '!**/*.jpg'],
+            dest: '<%= project_img %>-min'
+          }
+        ]
+      }
+    },
+
     parallel: {
       assets: {
         grunt: true,
-        tasks: ['imagemin', 'svgmin', 'uglify:dist']
+        tasks: ['imagemin', 'svgmin', 'uglify:dist', 'copy:dist']
       }
     }
   });
@@ -127,6 +149,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-parallel');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('build', [
     'parallel:assets',
