@@ -7,6 +7,6 @@ extension_path = File.expand_path(File.join(File.dirname(__FILE__), ".."))
 Compass::Frameworks.register('aurora', :path => extension_path)
 
 module Aurora
-  VERSION = "3.0.6"
-  DATE = "2013-05-12"
+  VERSION = "3.0.7"
+  DATE = "2013-06-14"
 end
