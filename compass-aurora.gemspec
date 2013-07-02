@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   # Project Description
   s.description = "Aurora Subthemes!"
   s.summary = "The companion gem for the Drupal Aurora base theme."
+  s.licenses = ["GPL"]
 
   # Files to Include
   s.files  =  Dir.glob("lib/**/*.*")
