@@ -1,0 +1,19 @@
+@import "toolkit/clearfix";
+
+.element-invisible {
+  position: absolute !important;
+  overflow: hidden;
+  height: 1px;
+
+  &.element-focusable:active,
+  &.element-focusable:focus {
+    position: static !important;
+    clip: auto;
+    overflow: visible;
+    height: auto;
+  }
+}
+
+.clearfix {
+  @include clearfix($extend: true);
+}

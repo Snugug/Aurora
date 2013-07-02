@@ -1,0 +1,196 @@
+@import "toolkit/box-sizing";
+@import "toolkit/colors";
+@import "toolkit/equal-height-columns";
+@import "breakpoint";
+
+@mixin vertical-tabs($tab-bkg: #f2f2f2, $tab-width: 240px, $main-bkg: #fff, $break: 735px, $border: 1px solid #ccc) {
+
+  $bkpt: 'min-width' $break;
+  $widths: $tab-width, 100%;
+  $colors: $tab-bkg, $main-bkg;
+
+  .vertical-tabs {
+    @include box-sizing('border-box');
+
+    background: $main-bkg;
+    @include breakpoint($bkpt) {
+      [dir="ltr"] & {
+      @include equal-height-columns($widths, $colors);
+      }
+      [dir="rtl"] & {
+	@include equal-height-columns($widths, $colors, right);
+      }
+    }
+
+
+    border: $border;
+    margin: 0;
+    position: relative;
+
+    * {
+      @include box-sizing('border-box');
+    }
+  }
+
+  .vertical-tabs-pane {
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    @include breakpoint($bkpt) {
+      width: 100%;
+      clear: both;
+    }
+
+
+    legend {
+      display: none;
+    }
+
+    fieldset legend {
+      display: block;
+    }
+
+    .fieldset-wrapper {
+      padding-top: 0.3125em;
+    }
+  }
+
+  .vertical-tabs-list {
+    [dir="ltr"] & {
+      float: left;
+    }
+    [dir="rtl"] & {
+      float: right;
+    }
+
+    font-size: 1em;
+    line-height: 1;
+
+    width: 100%;
+    background: $tab-bkg;
+    @include breakpoint($bkpt) {
+      width: $tab-width;
+
+    }
+
+
+    .vertical-tabs & {
+      margin: 0;
+      padding: 10px;
+      border-bottom: $border;
+
+      @include breakpoint($bkpt) {
+	padding: 0;
+      }
+    }
+  }
+
+  .vertical-tabs-panes {
+    @include breakpoint($bkpt) {
+      [dir="ltr"] & {
+	border-left: $border;
+	margin-left: $tab-width - 1px;
+      }
+
+      [dir="rtl"] & {
+	border-right: $border;
+	margin-right: $tab-width - 1px;
+      }
+    }
+
+
+    input {
+      max-width: 100%;
+    }
+
+    // padding: 10px 15px 10px 0;
+  }
+
+  .vertical-tab-button {
+    list-style: none;
+    list-style-image: none;
+
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+
+    @include breakpoint($bkpt) {
+      margin: 0;
+      display: block;
+      border-bottom: $border;
+    }
+
+    &.last a {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint($bkpt) {
+      [dir="ltr"] & {
+	border-right: $border;
+      }
+
+      [dir="rtl"] & {
+	border-left: $border;
+      }
+    }
+
+    &.selected {
+      [dir="ltr"] & {
+	border-right-color: $main-bkg;
+      }
+
+      [dir="rtl"] & {
+	border-left-color: $main-bkg;
+      }
+
+      a {
+	background: $main-bkg;
+
+	&:hover,
+	a:focus {
+	  background: $main-bkg;
+	}
+      }
+    }
+
+    a {
+      display: block;
+      line-height: 1;
+
+      padding: 5px 10px;
+      border-radius: 5px;
+
+      margin-bottom: 5px;
+
+      background: shade($tab-bkg, 11%);
+
+      @include breakpoint($bkpt) {
+	padding: 10px;
+	border-radius: 0;
+	margin-bottom: 0;
+	background: transparent;
+      }
+
+
+      &:hover,
+      &:focus {
+	background: shade($tab-bkg, 21%);
+
+	@include breakpoint($bkpt) {
+	  background: shade($tab-bkg, 11%);
+	}
+
+	text-decoration: none;
+	outline: 0;
+      }
+    }
+
+    .summary {
+      color: #666;
+      display: block;
+      font-size: 0.846em;
+      margin-top: 0.4em;
+    }
+  }
+}
