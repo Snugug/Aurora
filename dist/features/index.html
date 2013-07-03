@@ -5,7 +5,7 @@
   <head>
     <title>Aurora Documentation</title>
     <link rel="stylesheet" href="/Aurora/styles/main.css" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0">
     <script>
       (function() {
         var config = {
@@ -29,9 +29,7 @@
         </aside>
       </header>
     </div>
-    <div id="aurora-wrapper" class="page-wrapper">
-      <canvas id="aurora-canvas"></canvas>
-    </div>
+    <div id="aurora-wrapper" class="page-wrapper"></div>
     <div id="nav" class="page-wrapper">
       <div class="content-wrapper">
         <nav class="main-nav"><a href="/Aurora/" title="Home">Home</a><a href="/Aurora/install" title="Install">Install</a><a href="/Aurora/subthemes" title="Subthemes">Subthemes</a><a href="/Aurora/sass" title="Sass">Sass</a><a href="/Aurora/features" title="Features">Features</a><a href="/Aurora/modules" title="Modules">Modules</a><a href="/Aurora/roadmap" title="Roadmap">Roadmap</a>
@@ -44,7 +42,8 @@
           <section id="basic">
             <h1>Basic Features</h1><p>Aurora has a handful of useful features allowing you to get up and theming quickly. Many of the features from Aurora 2.x have been moved to the <a href="http://drupal.org/project/magic">Magic module</a>, so be sure to install Magic to get the most out of Aurora.</p>
 <h2>HTML5 Templates</h2>
-<p>Aurora comes with many of Drupal&#39;s default templates updated to use the proper HTML5 syntaxes as well as proper ARIA roles. It also comes with an HTML5 Figure layout for <a href="http://drupal.org/project/ds">Display Suite</a> and an HTML5 Sections layout for <a href="http://drupal.org/project/panels">Panels</a> which is a fork of the Flexible layout, but only allowing for rows, thus allowing for source ordering and grouping. The Panels Sections layout produces much cleaner default HTML than then Flexible layout, and you can edit the attributes of the output by calling <code>hook_aurora_layout_attributes_alter(&amp;$attributes)</code>.</p>
+<p>Aurora comes with many of Drupal&#39;s default templates updated to use the proper HTML5 syntaxes as well as proper ARIA roles. It also comes with an HTML5 Figure layout for <a href="http://drupal.org/project/ds">Display Suite</a> and an HTML5 Sections layout for <a href="http://drupal.org/project/panels">Panels</a> which is a fork of the Flexible layout, but only allowing for rows, thus allowing for source ordering and grouping. The Panels Sections layout produces much cleaner default HTML than then Flexible layout, and you can edit the attributes of the output with the following hook:</p>
+<pre><code class="lang-php">hook_aurora_layout_attributes_alter(&amp;$attributes)</code></pre>
 <h2>Internet Explorer Support</h2>
 <p>Old Internet Explorer support is a pain. Aurora comes with a couple of ways of making it easier. A dropdown menu allows you to choose your minimum supported IE version, which will add an <code>.lt-ie{version}</code> to your HTML for versions of IE less than your supported version of IE. A checkbox will also allow you to enable or disable <a href="https://www.youtube.com/watch?v=sjW0Bchdj-w&amp;feature=player_embedded">Google Chrome Frame</a>, which itself is wrapped to display only below your minimum supported version of IE.</p>
 <h2>Development Options</h2>
@@ -79,7 +78,6 @@
         </article>
       </main>
     </div>
-    <script src="/Aurora/scripts/main.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
