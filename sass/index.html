@@ -5,7 +5,7 @@
   <head>
     <title>Aurora Documentation</title>
     <link rel="stylesheet" href="/Aurora/styles/main.css" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0">
     <script>
       (function() {
         var config = {
@@ -29,9 +29,7 @@
         </aside>
       </header>
     </div>
-    <div id="aurora-wrapper" class="page-wrapper">
-      <canvas id="aurora-canvas"></canvas>
-    </div>
+    <div id="aurora-wrapper" class="page-wrapper"></div>
     <div id="nav" class="page-wrapper">
       <div class="content-wrapper">
         <nav class="main-nav"><a href="/Aurora/" title="Home">Home</a><a href="/Aurora/install" title="Install">Install</a><a href="/Aurora/subthemes" title="Subthemes">Subthemes</a><a href="/Aurora/sass" title="Sass">Sass</a><a href="/Aurora/features" title="Features">Features</a><a href="/Aurora/modules" title="Modules">Modules</a><a href="/Aurora/roadmap" title="Roadmap">Roadmap</a>
@@ -46,7 +44,7 @@
 <pre><code class="lang-bash">bundle exec compass compile</code></pre>
 <p>We use <code>bundle exec</code> to ensure that we are compiling our Sass with the correct versions of our gems as discussed in the <a href="../subthemes">subthemes</a> section of the site.</p>
 <h2>Compass Extensions</h2>
-<p>Compass extensions are similar to Drupal modules, allowing users to tap into the Sass front end community and use what others have made to make your life easier! Aurora comes bundled with a handful of what we believe are very useful and powerful Compass extensions that all share a similar approach to their development and are made available for you use out of the box. Besides searching, there are two good resources for finding Compass extensions: the <a href="https://github.com/jzorn/compass-normalize-plugin">Compass Wiki</a>,a wiki list open for anyone to edit and add extensions to, or <a href="https://github.com/team-sass">Team Sass</a>, a curated set of high quality extensions. Many of the extensions available with Aurora out of the box come from Team Sass.</p>
+<p>Compass extensions are similar to Drupal modules, allowing users to tap into the Sass front end community and use what others have made to make your life easier! Aurora comes bundled with a handful of what we believe are very useful and powerful Compass extensions that all share a similar approach to their development and are made available for you use out of the box. Besides searching, there are two good resources for finding Compass extensions: the <a href="https://github.com/chriseppstein/compass/wiki/Compass-Plugins">Compass Wiki</a>,a wiki list open for anyone to edit and add extensions to, or <a href="https://github.com/team-sass">Team Sass</a>, a curated set of high quality extensions. Many of the extensions available with Aurora out of the box come from Team Sass.</p>
 <p>There are 6 Compass extensions that come with Aurora, broken into four categories: Grids, Media Queries, Design, and Miscellaneous. Each one is imported individually, so if you would prefer not to use a given extension or would prefer to use a different one, simply remove it and install the one you&#39;d like to use. Be sure to update your <code>Gemfile</code> and re-install your bundle if you do.</p>
 <p>They are Breakpoint, Singularity, Color Schemer, Toolkit, Sassy Buttons, and Compass Normalize.</p>
 <h3>Grids</h3>
@@ -66,7 +64,6 @@
         </article>
       </main>
     </div>
-    <script src="/Aurora/scripts/main.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
