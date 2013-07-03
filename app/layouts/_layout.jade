@@ -14,8 +14,6 @@ html.no-js(lang='en')
 
     meta(name="viewport", content="initial-scale=1.0")
 
-    //- script(src="#{assetPath}/scripts/modernizr.js")
-
     script
       (function() {
         var config = {
@@ -48,12 +46,6 @@ html.no-js(lang='en')
     //- #footer(class='page-wrapper')
     //-   footer(class='content-wrapper')
     //-     block footer
-
-    - if (assetPath == "/Aurora") {
-      script(src="#{assetPath}/scripts/main.js")
-    -} else {
-      script(src="#{assetPath}/components/chibi/chibi-min.js")
-    -}
 
     //- Google Analytics Tracking Code
     script
