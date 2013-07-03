@@ -48,6 +48,9 @@ h1, h2, h3, h4, h5, h6, #nav a {
   padding: 1em;
 
   opacity: 1;
+
+  overflow: hidden;
+
   @include single-transition(opacity, 1s);
 
   .wf-loading & {
@@ -57,15 +60,17 @@ h1, h2, h3, h4, h5, h6, #nav a {
 
 #aurora-wrapper {
   position: relative;
-}
+  background-image: inline-image('aurora2.jpg');
+  background-repeat: repeat-x;
+  background-size: 100%;
 
-#aurora-canvas {
-  width: 100%;
-  height: auto;
+  height: image-height('aurora2.jpg');
+  width: image-width('aurora2.jpg');
+
   position: absolute;
-  top: 0;
-  right: 0;
   z-index: -100;
+
+  max-width: 100%;
 }
 
 #nav {
@@ -149,6 +154,9 @@ pre {
 code {
   background: #333;
   border-radius: 3px;
+  max-width: 100%;
+
+  overflow: auto;
 
   p & {
     padding-left: .25em;
