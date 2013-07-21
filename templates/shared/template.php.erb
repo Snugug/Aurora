@@ -3,10 +3,8 @@
 /**
  * Override or insert variables into the maintenance page template.
  *
- * @param $vars
+ * @param $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("maintenance_page" in this case.)
  */
 function <%= project_name %>_preprocess_maintenance_page(&$variables) {
   // When a variable is manipulated or added in preprocess_html or
@@ -41,10 +39,8 @@ function <%= project_name %>_modernizr_load_alter(&$load) {
 /**
  * Implements hook_preprocess_html()
  *
- * @param $vars
+ * @param $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("html" in this case.)
  */
 /* -- Delete this line if you want to use this function
 function <%= project_name %>_preprocess_html(&$variables) {
@@ -54,10 +50,8 @@ function <%= project_name %>_preprocess_html(&$variables) {
 /**
  * Override or insert variables into the page template.
  *
- * @param $vars
+ * @param $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("page" in this case.)
  */
 /* -- Delete this line if you want to use this function
 function <%= project_name %>_preprocess_page(&$variables) {
@@ -67,10 +61,8 @@ function <%= project_name %>_preprocess_page(&$variables) {
 /**
  * Override or insert variables into the region templates.
  *
- * @param $vars
+ * @param $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("region" in this case.)
  */
 /* -- Delete this line if you want to use this function
 function <%= project_name %>_preprocess_region(&$variables) {
@@ -81,10 +73,8 @@ function <%= project_name %>_preprocess_region(&$variables) {
 /**
  * Override or insert variables into the block templates.
  *
- * @param $vars
+ * @param $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("block" in this case.)
  */
 /* -- Delete this line if you want to use this function
 function <%= project_name %>_preprocess_block(&$variables) {
@@ -95,10 +85,8 @@ function <%= project_name %>_preprocess_block(&$variables) {
 /**
  * Override or insert variables into the entity template.
  *
- * @param $vars
+ * @param $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("entity" in this case.)
  */
 /* -- Delete this line if you want to use this function
 function <%= project_name %>_preprocess_entity(&$variables) {
@@ -109,10 +97,8 @@ function <%= project_name %>_preprocess_entity(&$variables) {
 /**
  * Override or insert variables into the node template.
  *
- * @param $vars
+ * @param $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("node" in this case.)
  */
 /* -- Delete this line if you want to use this function
 function <%= project_name %>_preprocess_node(&$variables) {
@@ -123,7 +109,7 @@ function <%= project_name %>_preprocess_node(&$variables) {
 /**
  * Override or insert variables into the field template.
  *
- * @param $vars
+ * @param $variables
  *   An array of variables to pass to the theme template.
  * @param $hook
  *   The name of the template being rendered ("field" in this case.)
@@ -137,10 +123,8 @@ function <%= project_name %>_preprocess_field(&$variables, $hook) {
 /**
  * Override or insert variables into the comment template.
  *
- * @param $vars
+ * @param $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("comment" in this case.)
  */
 /* -- Delete this line if you want to use this function
 function <%= project_name %>_preprocess_comment(&$variables) {
