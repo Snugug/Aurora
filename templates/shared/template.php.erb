@@ -8,7 +8,7 @@
  * @param $hook
  *   The name of the template being rendered ("maintenance_page" in this case.)
  */
-function <%= project_name %>_preprocess_maintenance_page(&$vars, $hook) {
+function <%= project_name %>_preprocess_maintenance_page(&$variables) {
   // When a variable is manipulated or added in preprocess_html or
   // preprocess_page, that same work is probably needed for the maintenance page
   // as well, so we can just re-use those functions to do that work here.
@@ -47,7 +47,7 @@ function <%= project_name %>_modernizr_load_alter(&$load) {
  *   The name of the template being rendered ("html" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function <%= project_name %>_preprocess_html(&$vars) {
+function <%= project_name %>_preprocess_html(&$variables) {
 
 }
 
@@ -60,7 +60,7 @@ function <%= project_name %>_preprocess_html(&$vars) {
  *   The name of the template being rendered ("page" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function <%= project_name %>_preprocess_page(&$vars) {
+function <%= project_name %>_preprocess_page(&$variables) {
 
 }
 
@@ -73,7 +73,7 @@ function <%= project_name %>_preprocess_page(&$vars) {
  *   The name of the template being rendered ("region" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function <%= project_name %>_preprocess_region(&$vars, $hook) {
+function <%= project_name %>_preprocess_region(&$variables) {
 
 }
 // */
@@ -87,7 +87,7 @@ function <%= project_name %>_preprocess_region(&$vars, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function <%= project_name %>_preprocess_block(&$vars, $hook) {
+function <%= project_name %>_preprocess_block(&$variables) {
 
 }
 // */
@@ -101,7 +101,7 @@ function <%= project_name %>_preprocess_block(&$vars, $hook) {
  *   The name of the template being rendered ("entity" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function <%= project_name %>_preprocess_entity(&$vars, $hook) {
+function <%= project_name %>_preprocess_entity(&$variables) {
 
 }
 // */
@@ -115,7 +115,7 @@ function <%= project_name %>_preprocess_entity(&$vars, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function <%= project_name %>_preprocess_node(&$vars, $hook) {
+function <%= project_name %>_preprocess_node(&$variables) {
   $node = $vars['node'];
 }
 // */
@@ -129,7 +129,7 @@ function <%= project_name %>_preprocess_node(&$vars, $hook) {
  *   The name of the template being rendered ("field" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function <%= project_name %>_preprocess_field(&$vars, $hook) {
+function <%= project_name %>_preprocess_field(&$variables, $hook) {
 
 }
 // */
@@ -143,7 +143,7 @@ function <%= project_name %>_preprocess_field(&$vars, $hook) {
  *   The name of the template being rendered ("comment" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function <%= project_name %>_preprocess_comment(&$vars, $hook) {
+function <%= project_name %>_preprocess_comment(&$variables) {
   $comment = $vars['comment'];
 }
 // */
