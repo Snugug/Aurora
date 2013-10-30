@@ -1,4 +1,4 @@
-# Aurora Compass Extension
+# Aurora Compass Extension [![Gem Version](https://badge.fury.io/rb/compass-aurora.png)](http://badge.fury.io/rb/compass-aurora)
 
 This compass extension is used to create Drupal sub-themes for the [Aurora base theme](http://drupal.org/project/aurora).
 
