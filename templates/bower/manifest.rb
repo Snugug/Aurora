@@ -3,7 +3,7 @@ no_configuration_file!
 
 # Bower's for the Birds
 file '../shared/bowerrc.txt', :to => '.bowerrc'
-file '../shared/component.json.erb', :to => 'component.json', :erb => true
+file '../shared/bower.json.erb', :to => 'bower.json', :erb => true
 
 help %Q{
   Please contact Sam Richard with questions:
