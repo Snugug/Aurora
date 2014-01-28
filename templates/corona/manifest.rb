@@ -6,7 +6,6 @@ file '../shared/config.rb.erb', :to => "config.rb", :erb => true
 
 # Add in README
 file '../shared/README-Sass.md',  :like => :stylesheet, :to => 'README.md'
-file '../shared/README-Partials.md',  :like => :stylesheet, :to => 'partials/README.md'
 file '../shared/README-templates.md', :to => "templates/README.md"
 
 # ERB ALL the Drupal files!
@@ -17,10 +16,10 @@ file '../shared/template.php.erb', :to => "template.php", :erb => true
 # Stylesheets
 discover :stylesheets
 
-file '../shared/_functions.scss', :like => :stylesheet, :to => 'partials/_functions.scss'
-file '../shared/_mixins.scss', :like => :stylesheet, :to => 'partials/_mixins.scss'
+file '../shared/_functions.scss', :like => :stylesheet, :to => 'config/_functions.scss'
+file '../shared/_mixins.scss', :like => :stylesheet, :to => 'config/_mixins.scss'
 
-file '../shared/_extendables.scss', :like => :stylesheet, :to => 'partials/global/_extendables.scss'
+file '../shared/_extendables.scss', :like => :stylesheet, :to => 'global/_extendables.scss'
 
 # Developer Consistency
 file '../shared/Gemfile.txt', :to => 'Gemfile'

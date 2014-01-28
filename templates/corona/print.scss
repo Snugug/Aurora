@@ -5,10 +5,15 @@
 // This file is styles specific to Printed files.
 ////////////////////////
 
+
 ////////////////////////
-// Base Import
+// Configuration, no CSS output.
+//   variables
+//   mixins
+//   functions
+//   compass extensions
 ////////////////////////
-@import 'partials/base';
+@import 'config/config';
 
 
 ////////////////////////
