@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
 
   # Author Information
   s.authors = ["Sam Richard", "Ian Carrico"]
-  s.email = ["snugug@gmail.com", "ian@iancarrico.com"]
+  s.email = ["snugug@gmail.com", "github@iancarrico.com"]
   s.homepage = "http://drupal.org/project/aurora"
 
   # Project Description
@@ -26,10 +26,12 @@ Gem::Specification.new do |s|
 
   # Dependent Gems
 
-  s.add_dependency("compass",           [">= 0.12.2"])
-  s.add_dependency("toolkit",           [">= 1.2.2"])
-  s.add_dependency("sassy-buttons",     [">= 0.2.0"])
-  s.add_dependency("compass-normalize", [">= 1.4.3"])
+  s.add_dependency("sass",              ["~> 3.2.14"])
+  s.add_dependency("compass",           ["~> 0.12.2"])
+  s.add_dependency("toolkit",           ["~> 1.2.2"])
+  s.add_dependency("breakpoint",        ["~> 2.0.1"])
+  s.add_dependency("sassy-buttons",     ["~> 0.2.0"])
+  s.add_dependency("singularitygs",     ["~> 1.1.2"])
+  s.add_dependency("compass-normalize", ["~> 1.4.3"])
   s.add_dependency("bundler",           [">= 1.3.5"])
-  s.add_dependency("css_parser",        [">= 1.3.4"])
 end
