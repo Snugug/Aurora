@@ -1,0 +1,20 @@
+////////////////////////
+// Browser support
+////////////////////////
+
+// Legacy IE support
+//
+// These variables are used by many mixins to add additional CSS to support
+// specific versions of IE or specific vendor prefixes.
+//
+// To turn on support for IE6 or IE7, set those variables to true.
+//
+// These variables are used throughout compass, but specifically within the
+// compass-normalize extension.
+//
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+// Support for Firefox 3.6 and earlier.
+$legacy-support-for-mozilla: false;
