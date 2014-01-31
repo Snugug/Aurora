@@ -7,14 +7,13 @@
 ////////////////////////
 
 ////////////////////////
-// Base Import
+// Configuration, no CSS output.
+//   variables
+//   mixins
+//   functions
+//   compass extensions
 ////////////////////////
-@import 'partials/base';
-
-////////////////////////
-// Other partial import
-////////////////////////
-@import 'partials/global/global';
+@import 'config/config';
 
 
 // Code specifically for the maintenance page.
