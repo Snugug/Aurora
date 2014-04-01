@@ -1,0 +1,16 @@
+/**
+ * @file
+ * Styles for IE 8 and lower.
+ */
+
+// Set the legacy IE support variables.
+$browser-minimum-versions:    (ie: '7');
+$graceful-usage-threshold:    0.1;
+$critical-usage-threshold:    .01;
+
+// Force the breakpoint mixin to discard all media queries except ones with
+// $no-query set to true.
+$breakpoint-no-queries  : true;
+$breakpoint-no-query-fallbacks : true;
+
+@import "style";

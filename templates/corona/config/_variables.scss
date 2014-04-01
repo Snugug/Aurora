@@ -2,22 +2,6 @@
 //
 // All of your variables should go in this file.
 
-
-// Legacy IE support
-//
-// These variables are used by many mixins to add additional CSS to support
-// specific versions of IE or specific vendor prefixes.
-//
-// To turn on support for IE6 or IE7, set those variables to true.
-//
-// These variables are used throughout compass, but specifically within the
-// compass-normalize extension.
-// /
-$legacy-support-for-ie6: false;
-$legacy-support-for-ie7: false;
-$legacy-support-for-ie8: true;
-
-
 // Font faces, stacks and sizes.
 
 $base-font-size:   16px;
@@ -68,20 +52,21 @@ $black          : #000000;
 
 // Standard colors: for standard 4K and other brand colors.
 // Note: these are just for reference, and some brands have multiple colors.
-$color-facebook : #3B5998;
-$color-twitter  : #33CCFF;
-$color-youtube  : #FF3333;
-$color-pinterest: #990000;
-$color-skype    : #12A5F4;
-$color-flickr   : #FE0883;
-$color-foursquare: #8FD400;
-$color-instagram: #4E433C;
-$color-linkedin : #4875B4;
-$color-tumblr   : #2B4964;
-$color-vimeo    : #86B32D;
-$color-google   : #D6492C;
-$color-fk       : #66B360;
-
+$social-colors:(
+  facebook    : #3B5998,
+  twitter     : #33CCFF,
+  youtube     : #FF3333,
+  pinterest   : #990000,
+  skype       : #12A5F4,
+  flickr      : #FE0883,
+  foursquare  : #8FD400,
+  instagram   : #4E433C,
+  linkedin    : #4875B4,
+  tumblr      : #2B4964,
+  vimeo       : #86B32D,
+  google      : #D6492C,
+  fk          : #66B360,
+);
 
 // Base color variables.
 $link           : #2090B4;
@@ -100,16 +85,20 @@ $indent-amount: 2em;
 // integrate it with breakpoint as well.
 //
 // @see https://github.com/Team-Sass/Singularity/wiki
+@include sgs-change('mobile first',       true);
+@include sgs-change('include border box', false);
+@include sgs-change('include clearfix',   false);
+// Enable this if you want rtl support.
+//@include sgs-change('direction',          'both');
 
-$mobile-first         : true;
-$include-border-box   : false;
-$include-clearfix     : false;
+// Define our grids
+@include add-grid(12);
+// @include add-grid(4 at 500px);
+// @include add-grid(8 3 at 800px);
 
-$grids                : 12;
-$gutters              : 1/3;
-
-
-
+// Define our gutters.
+@include add-gutter(1/3);
+//@include add-gutter(1/4 at 800px);
 
 // Add breakpoint settings.
 //
@@ -125,13 +114,8 @@ $gutters              : 1/3;
 //
 // @see https://github.com/Team-Sass/breakpoint/wiki/Respond-To
 
-// $sample-breakpoints: "small-ish" (300px),
-//                      "medium-ish" (460px),
-//                      "large-ish" (770px),
-//                      "extra-large-ish" (1000px);
-
 
 $breakpoint-no-query-fallbacks: true;
 $breakpoint-to-ems: true;
 
-$breakpoints: '';
+//$breakpoints: add-breakpoint('sample breakpoint', 800px);

@@ -5,6 +5,7 @@ no_configuration_file!
 file '../shared/config.rb.erb', :to => "config.rb", :erb => true
 
 # Add in README
+file 'CORONA.md', :to => 'README.md'
 file '../shared/README-Sass.md',  :like => :stylesheet, :to => 'README.md'
 file '../shared/README-templates.md', :to => "templates/README.md"
 
@@ -16,6 +17,8 @@ file '../shared/template.php.erb', :to => "template.php", :erb => true
 # Stylesheets
 discover :stylesheets
 
+file '../shared/style-ie8.scss', :like => :stylesheet, :to => 'style-ie8.scss'
+file '../shared/_print.scss', :like => :stylesheet, :to => '_print.scss'
 file '../shared/_functions.scss', :like => :stylesheet, :to => 'config/_functions.scss'
 file '../shared/_mixins.scss', :like => :stylesheet, :to => 'config/_mixins.scss'
 
@@ -43,4 +46,3 @@ welcome_message %Q{
 
   Alternatively, if you are using Grunt, simply run `grunt watch` to compile and start LiveReload.
 }
-

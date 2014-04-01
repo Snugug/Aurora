@@ -18,7 +18,10 @@ regions[footer]       = 'Footer'
 ; ========================================
 
 stylesheets[all][] = '<%= project_css %>/style.css'
-stylesheets[print][] = '<%= project_css %>/print.css'
+
+; If using conditional_stylesheets module
+; stylesheets-conditional[(gte IE 9)|(IEMobile)|(!IE)][all][] = css/style.css
+; stylesheets-conditional[(lt IE 9)][all][] = css/style-ie8.css
 
 ; If installed through Bower
 ; stylesheets[all][] = 'components/formalize/assets/css/formalize.css'

@@ -18,7 +18,7 @@
 ////////////////////////
 // Import global elements
 ////////////////////////
-@import 'global/normalize.css';
+@import 'global/_normalize.css.scss';
 @import 'global/extendables';
 @import 'global/type';
 @import 'global/forms';
@@ -34,3 +34,8 @@
 ////////////////////////
 //@import 'components/tabs';
 //@import 'components/button';
+
+////////////////////////
+// Import print
+////////////////////////
+@import 'print';
