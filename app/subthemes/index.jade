@@ -9,36 +9,19 @@ block content
       h1 Subthemes
 
       :markdown
-        Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is done through Compass. Aurora subthemes come in three different flavors, [Aurora](#aurora-subtheme), [Corona](#corona-subtheme), and [Polaris](#polaris-subtheme). Type one of the following into your command line, replacing `<my_theme>` with the machine name of your theme:
-
-        **For the Aurora flavor**
-        ```bash
-        compass create <my_theme> -r aurora --using aurora
-        ```
-
-        ** For the Corona flavor**
-        ```bash
-        compass create <my_theme> -r aurora --using aurora/corona
-        ```
-
-        ** For the Polaris flavor**
-        ```bash
-        compass create <my_theme> -r aurora --using aurora/polaris
-        ```
-
-        Once you have your subtheme created, you need to install its [Bundler](http://gembundler.com/) dependencies. Aurora makes use of Bundler to ensure the gems you are working with are always the correct version that you mean to use. This allows you to update your gems at will and use newer versions of gems on newer projects while keeping your older projects at the proper versions. To install the dependencies, `cd` into your theme's directory from the command line and run the following:
+        Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is now done through [Yeoman](http://yeoman.io/). Make sure you have [installed all prerequisites](/install/), then within your theme folder, run:
 
         ```bash
-        bundle install
+        yo aurora
         ```
 
-        This will create a `Gemfile.lock` file, which should be committed to your version control system. If you ever want to update the versions of the gems you are using, update their version numbers in the supplied `Gemfile` and run `bundle install` again.
-
-        While doing so is discouraged, if you need to support IE<8, you may find it beneficial to install the `box-sizing: border-box` behavior. From the command line:
+        You will be prompted for your project name, and the type of project you want to start. There are several flavors of Aurora, each listed below. You can also optionally add a gulpfile.js or bower.json file along with your project. If you do not select one of these options, you can add them in later with:
 
         ```bash
-        compass install aurora/box-sizing
+        yo aurora:extras
         ```
+
+        When the generator runs, it will grab all dependencies that are required. This will
 
     section
       h2#aurora-subtheme Aurora

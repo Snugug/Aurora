@@ -17,19 +17,27 @@ block content
 
         ## Sass+Compass
 
-        Aurora is deeply integrated with Sass and Compass, so in order to use Aurora, you need to have the both installed. Sass and Compass are Ruby projects, so you're going to need to ensure your machine is running Ruby as well. If you do not have them installed, here are instructions for [installing Sass and Compass across all platforms](http://snugug.com/musings/installing-sass-and-compass-across-all-platform).
+        Aurora is deeply integrated with Sass and Compass, so in order to use Aurora, you need to have the both installed. Sass and Compass are Ruby projects, so you're going to need to ensure your machine is running Ruby as well. If you do not have them installed, here are instructions for [installing Sass and Compass across all platforms](http://snugug.com/musings/installing-sass-and-compass-across-all-platform). You should also use the gem [Bundler](http://bundler.io/) to ensure you are always using the right gem versions. 
 
         **Aurora requires you to use the Command Line to compile Sass. You cannot use a GUI based Sass tool like CodeKit or Compass.app.** This is because Aurora relies upon Compass Extensions and the Bundler gem, neither of which are available through GUI tools. The command line isn't scary, I promise.
 
-        After you have Sass+Compass installed, you are going to need to install the Compass Aurora gem. Doing so is easy, from your command line, type the following, including `sudo` if need be:
+        ## Yeoman
+
+        We have moved the generation of subthemes to [Yeoman](http://yeoman.io/). Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced. To use Yeoman, make sure you have installed [node.js](http://nodejs.org/), then run once from the command line:
 
         ```bash
-        gem install compass-aurora
+        npm install -g yo generator-aurora
+        ```
+
+        You can update the generator with:
+
+        ```bash
+        npm update -g generator-aurora
         ```
 
         ## Advanced Features
 
-        Aurora comes with optional [advanced functionality](../features#advanced) through integrations with Bower and Grunt. Both require Node.js, so if you'd like to use them, [go install Node.js](http://nodejs.org/).
+        Aurora comes with optional [advanced functionality](../features#advanced) through integrations with Bower and Gulp.
 
         ### Bower
 
@@ -39,10 +47,10 @@ block content
         npm install -g bower
         ```
 
-        ### Grunt
+        ### Gulp
 
-        [Grunt](http://gruntjs.com/) is a JavaScript Task Runner that allows you to easily automate common tasks. "The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it, a task runner can do most of that mundane work for you—and your team—with basically zero effort.". Installing Grunt is easy, simply type the following into your command line:
+        [Gulp](http://gulpjs.com/) is a JavaScript Task Runner that allows you to easily automate common tasks. "The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it, a task runner can do most of that mundane work for you—and your team—with basically zero effort.". Installing Gulp is easy, simply type the following into your command line:
 
         ```bash
-        npm install -g grunt-cli
+        npm install -g gulp
         ```

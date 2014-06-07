@@ -21,7 +21,7 @@ block content
 
         ## Internet Explorer Support
 
-        Old Internet Explorer support is a pain. Aurora comes with a couple of ways of making it easier. A dropdown menu allows you to choose your minimum supported IE version, which will add an `.lt-ie{version}` to your HTML for versions of IE less than your supported version of IE. A checkbox will also allow you to enable or disable [Google Chrome Frame](https://www.youtube.com/watch?v=sjW0Bchdj-w&feature=player_embedded), which itself is wrapped to display only below your minimum supported version of IE.
+        Old Internet Explorer support is a pain. Aurora comes with a couple of ways of making it easier. A dropdown menu allows you to choose your minimum supported IE version, which will add an `.lt-ie{version}` to your HTML for versions of IE less than your supported version of IE.
 
         ## Development Options
 
@@ -46,7 +46,7 @@ block content
         If you would like to take advantage of Bower integration, first make sure you have [installed Bower](../install), then from your command line, type the following in:
 
         ```bash
-        compass install aurora/bower
+        yo aurora:extras
         ```
 
         This will install a `components.json` file as well as a `.bowerrc` file to allow you to use Bower out of the box. Aurora's provided `components.json` includes a [Formalize](http://formalize.me/) dependency for added normalization across browsers. To install it, from your command line, type the following in:
@@ -55,34 +55,20 @@ block content
         bower install
         ```
 
-        ## Grunt
+        ## Gulp
 
-        If you would like to take advantage of the Grunt integration, first make sure you have [installed Grunt](../install), then from your command line, type the following in:
+        If you would like to take advantage of the Gulp integration, first make sure you have [installed Gulp](../install), then from your command line, type the following in:
 
         ```bash
-        compass install aurora/grunt
+        yo aurora:extras
         ```
 
-        This will install a `Gruntfile.js` file as well as a `package.json` file to manage your Grunt dependencies. The build of Grunt Aurora comes with handles a handful of very useful functions depending on whether you `watch` or `build`.
+        This will install a `gulpfile.js` file as well as a `package.json` file to manage your Gulp dependencies.
 
-        To install the Grunt dependencies, from your command line, type the following in:
+        To install the Gulp dependencies, from your command line, type the following in:
 
         ```bash
         npm install
         ```
 
-        ### Watch Task
-
-        ```bash
-        grunt watch
-        ```
-
-        While you're developing, it's useful to have your Sass compile on the fly and reload your browser. The watch task will automatically compile your Sass files for you, including running everything through `bundle exec`, will [JSHint](http://jshint.com/) your JavaScript files for you, run a LiveReload server, and reload your browser for you whenever your Sass or JavaScript changes! To take advantage of the Grunt LiveReload server, set your LiveReload setting to `Aurora Default Port`.
-
-        ### Build Task
-
-        ```bash
-        grunt build
-        ```
-
-        When you're ready for production, it's time to get your files in tip-top shape. The build task will compile your Sass for production, run your images through [OptiPNG](http://optipng.sourceforge.net/) and [jpegtran](http://jpegclub.org/jpegtran/) to optimize them, ensure your Sass image paths are pointing to the optimized images (assuming you're using `image-url`), and give your JavaScript one final pass through JSHint.
+        ### Gulp Documentation in the works
