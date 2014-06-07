@@ -24,7 +24,7 @@
         <aside id="page-id">
           <h2 class="section-name">Install</h2>
           <div class="page-info">
-            <p>Version 7.x-3.0</p>
+            <p>Version 7.x-3.3</p>
           </div>
         </aside>
       </header>
@@ -41,21 +41,24 @@
         <article>
           <section>
             <h1>Installation</h1><p>Unlike most Drupal modules and themes, Aurora is very specifically designed to work with and rely upon third party tools in order to function. Because of this, Aurora has some dependencies that you need to resolve before getting to work</p>
-<h2>Drupal</h2>
+<h2 id="drupal">Drupal</h2>
 <p>Aurora is a base theme, so be sure to <a href="http://drupal.org/project/aurora">install Aurora from Drupal.org</a>. You will also need to install the <a href="http://drupal.org/project/magic">Magic</a> module as many of features that make Aurora great have been moved to that module in order to make them generic enough for everyone to use them. We also highly encourage you install the <a href="http://drupal.org/project/html5_tools">HTML5 Tools</a> module.</p>
-<h2>Sass+Compass</h2>
-<p>Aurora is deeply integrated with Sass and Compass, so in order to use Aurora, you need to have the both installed. Sass and Compass are Ruby projects, so you&#39;re going to need to ensure your machine is running Ruby as well. If you do not have them installed, here are instructions for <a href="http://snugug.com/musings/installing-sass-and-compass-across-all-platform">installing Sass and Compass across all platforms</a>.</p>
+<h2 id="sass-compass">Sass+Compass</h2>
+<p>Aurora is deeply integrated with Sass and Compass, so in order to use Aurora, you need to have the both installed. Sass and Compass are Ruby projects, so you&#39;re going to need to ensure your machine is running Ruby as well. If you do not have them installed, here are instructions for <a href="http://snugug.com/musings/installing-sass-and-compass-across-all-platform">installing Sass and Compass across all platforms</a>. You should also use the gem <a href="http://bundler.io/">Bundler</a> to ensure you are always using the right gem versions. </p>
 <p><strong>Aurora requires you to use the Command Line to compile Sass. You cannot use a GUI based Sass tool like CodeKit or Compass.app.</strong> This is because Aurora relies upon Compass Extensions and the Bundler gem, neither of which are available through GUI tools. The command line isn&#39;t scary, I promise.</p>
-<p>After you have Sass+Compass installed, you are going to need to install the Compass Aurora gem. Doing so is easy, from your command line, type the following, including <code>sudo</code> if need be:</p>
-<pre><code class="lang-bash">gem install compass-aurora</code></pre>
-<h2>Advanced Features</h2>
-<p>Aurora comes with optional <a href="../features#advanced">advanced functionality</a> through integrations with Bower and Grunt. Both require Node.js, so if you&#39;d like to use them, <a href="http://nodejs.org/">go install Node.js</a>.</p>
-<h3>Bower</h3>
+<h2 id="yeoman">Yeoman</h2>
+<p>We have moved the generation of subthemes to <a href="http://yeoman.io/">Yeoman</a>. Yeoman has a heart of gold. He&#39;s a person with feelings and opinions, but he&#39;s very easy to work with. If you think he&#39;s too opinionated, he can be easily convinced. To use Yeoman, make sure you have installed <a href="http://nodejs.org/">node.js</a>, then run once from the command line:</p>
+<pre><code class="lang-bash">npm install -g yo generator-aurora</code></pre>
+<p>You can update the generator with:</p>
+<pre><code class="lang-bash">npm update -g generator-aurora</code></pre>
+<h2 id="advanced-features">Advanced Features</h2>
+<p>Aurora comes with optional <a href="../features#advanced">advanced functionality</a> through integrations with Bower and Gulp.</p>
+<h3 id="bower">Bower</h3>
 <p><a href="http://bower.io/">Bower</a> is &quot;a package manager for the web&quot;, allowing you to easily manage many front-end tools for your projects. Installing Bower is easy, simply type the following into your command line:</p>
 <pre><code class="lang-bash">npm install -g bower</code></pre>
-<h3>Grunt</h3>
-<p><a href="http://gruntjs.com/">Grunt</a> is a JavaScript Task Runner that allows you to easily automate common tasks. &quot;The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you&#39;ve configured it, a task runner can do most of that mundane work for you—and your team—with basically zero effort.&quot;. Installing Grunt is easy, simply type the following into your command line:</p>
-<pre><code class="lang-bash">npm install -g grunt-cli</code></pre>
+<h3 id="gulp">Gulp</h3>
+<p><a href="http://gulpjs.com/">Gulp</a> is a JavaScript Task Runner that allows you to easily automate common tasks. &quot;The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you&#39;ve configured it, a task runner can do most of that mundane work for you—and your team—with basically zero effort.&quot;. Installing Gulp is easy, simply type the following into your command line:</p>
+<pre><code class="lang-bash">npm install -g gulp</code></pre>
 
           </section>
         </article>

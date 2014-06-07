@@ -24,7 +24,7 @@
         <aside id="page-id">
           <h2 class="section-name">Subthemes</h2>
           <div class="page-info">
-            <p>Version 7.x-3.0</p>
+            <p>Version 7.x-3.3</p>
           </div>
         </aside>
       </header>
@@ -40,18 +40,11 @@
       <main class="content-wrapper">
         <article>
           <section>
-            <h1>Subthemes</h1><p>Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is done through Compass. Aurora subthemes come in three different flavors, <a href="#aurora-subtheme">Aurora</a>, <a href="#corona-subtheme">Corona</a>, and <a href="#polaris-subtheme">Polaris</a>. Type one of the following into your command line, replacing <code>&lt;my_theme&gt;</code> with the machine name of your theme:</p>
-<p><strong>For the Aurora flavor</strong></p>
-<pre><code class="lang-bash">compass create &lt;my_theme&gt; -r aurora --using aurora</code></pre>
-<p><strong> For the Corona flavor</strong></p>
-<pre><code class="lang-bash">compass create &lt;my_theme&gt; -r aurora --using aurora/corona</code></pre>
-<p><strong> For the Polaris flavor</strong></p>
-<pre><code class="lang-bash">compass create &lt;my_theme&gt; -r aurora --using aurora/polaris</code></pre>
-<p>Once you have your subtheme created, you need to install its <a href="http://gembundler.com/">Bundler</a> dependencies. Aurora makes use of Bundler to ensure the gems you are working with are always the correct version that you mean to use. This allows you to update your gems at will and use newer versions of gems on newer projects while keeping your older projects at the proper versions. To install the dependencies, <code>cd</code> into your theme&#39;s directory from the command line and run the following:</p>
-<pre><code class="lang-bash">bundle install</code></pre>
-<p>This will create a <code>Gemfile.lock</code> file, which should be committed to your version control system. If you ever want to update the versions of the gems you are using, update their version numbers in the supplied <code>Gemfile</code> and run <code>bundle install</code> again.</p>
-<p>While doing so is discouraged, if you need to support IE&lt;8, you may find it beneficial to install the <code>box-sizing: border-box</code> behavior. From the command line:</p>
-<pre><code class="lang-bash">compass install aurora/box-sizing</code></pre>
+            <h1>Subthemes</h1><p>Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is now done through <a href="http://yeoman.io/">Yeoman</a>. Make sure you have <a href="/install/">installed all prerequisites</a>, then within your theme folder, run:</p>
+<pre><code class="lang-bash">yo aurora</code></pre>
+<p>You will be prompted for your project name, and the type of project you want to start. There are several flavors of Aurora, each listed below. You can also optionally add a gulpfile.js or bower.json file along with your project. If you do not select one of these options, you can add them in later with:</p>
+<pre><code class="lang-bash">yo aurora:extras</code></pre>
+<p>When the generator runs, it will grab all dependencies that are required. This will</p>
 
           </section>
           <section>

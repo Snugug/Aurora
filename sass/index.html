@@ -24,7 +24,7 @@
         <aside id="page-id">
           <h2 class="section-name">Sass+Compass</h2>
           <div class="page-info">
-            <p>Version 7.x-3.0</p>
+            <p>Version 7.x-3.3</p>
           </div>
         </aside>
       </header>
@@ -43,19 +43,19 @@
             <h1>Sass+Compass</h1><p>Sass+Compass are super powerful tools for writing CSS, and they are made even more powerful with the Compass extensions that come bundled with Aurora. Before diving in to the power available to you, you should know how to compile your Sass files. From the command line, inside your theme folder, from the same place where the <code>config.rb</code> file lives, type the following to have Compass start watching your Sass files for changes and recompiling them:</p>
 <pre><code class="lang-bash">bundle exec compass compile</code></pre>
 <p>We use <code>bundle exec</code> to ensure that we are compiling our Sass with the correct versions of our gems as discussed in the <a href="../subthemes">subthemes</a> section of the site.</p>
-<h2>Compass Extensions</h2>
+<h2 id="compass-extensions">Compass Extensions</h2>
 <p>Compass extensions are similar to Drupal modules, allowing users to tap into the Sass front end community and use what others have made to make your life easier! Aurora comes bundled with a handful of what we believe are very useful and powerful Compass extensions that all share a similar approach to their development and are made available for you use out of the box. Besides searching, there are two good resources for finding Compass extensions: the <a href="https://github.com/chriseppstein/compass/wiki/Compass-Plugins">Compass Wiki</a>,a wiki list open for anyone to edit and add extensions to, or <a href="https://github.com/team-sass">Team Sass</a>, a curated set of high quality extensions. Many of the extensions available with Aurora out of the box come from Team Sass.</p>
 <p>There are 6 Compass extensions that come with Aurora, broken into four categories: Grids, Media Queries, Design, and Miscellaneous. Each one is imported individually, so if you would prefer not to use a given extension or would prefer to use a different one, simply remove it and install the one you&#39;d like to use. Be sure to update your <code>Gemfile</code> and re-install your bundle if you do.</p>
 <p>They are Breakpoint, Singularity, Color Schemer, Toolkit, Sassy Buttons, and Compass Normalize.</p>
-<h3>Grids</h3>
+<h3 id="grids">Grids</h3>
 <p>The grid system that ships with Aurora is <a href="https://github.com/team-sass/singularity">Singularity</a>. From Singularity&#39;s description: &quot;Singularity is a next generation grid framework built from the ground up to be responsive. What makes Singularity different? Well, a lot of things. Singularity is based on internal ratios instead of context based which allows for better gutter consistency across breakpoints. Ratio based math also allows for non-uniform grids in any unit you want to use.&quot;</p>
-<h3>Media Queries</h3>
+<h3 id="media-queries">Media Queries</h3>
 <p>While you can write Media Queries by hand, Aurora ships with <a href="https://github.com/team-sass/breakpoint">Breakpoint</a> which makes writing your media queries super simple. From Breakpoint&#39;s description: &quot;Breakpoint makes writing media queries in Sass super simple. Create a variable using a simplified syntax based on most commonly used media queries, then call it using the <code>breakpoint</code> mixin. Breakpoint handles all of the heavy lifting, from writing the media query itself, to handling cross-browser compatibility issues, so you can focus on what&#39;s important: making sure your website looks its best.&quot;</p>
-<h3>Design</h3>
+<h3 id="design">Design</h3>
 <p>Aurora ships with two extensions to assist in design, <a href="https://github.com/Team-Sass/color-schemer">Color Schemer</a> and <a href="http://jaredhardy.com/sassy-buttons/">Sassy Buttons</a>.</p>
 <p>From Color Schemer&#39;s description: &quot;Color schemer is a robust color toolset for Sass. It expands on the existing <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">Sass color functions</a> and adds things like RYB manipulation, <em> set-hue, </em> set-lightness, tint, shade and more. It also leverages these tools adding a full-featured color scheming tool that allows you to set one primary color and create whole color schemes around it.&quot;</p>
 <p>From Sassy Button&#39;s description: &quot;Want that fancy CSS3 button look with none of the work? Then Sassy Buttons are for you! Easily create great looking, cross-browser compatible buttons with just a few lines of Sass and you&#39;ll be in button heaven in no time.&quot;</p>
-<h3>Miscellaneous</h3>
+<h3 id="miscellaneous">Miscellaneous</h3>
 <p>Aurora also ships with two extensions that do some varied things. The two are <a href="https://github.com/Team-Sass/toolkit">Toolkit</a> and <a href="https://github.com/ksmandersen/compass-normalize">Compass Normalize</a>.</p>
 <p>From Toolkit&#39;s description: &quot;Think of Toolkit as your swiss army knife for Progressive Enhancement and Responsive Web Design. Those little bits and bobs that make your life easy and you want to reuse throughout projects but never really had a place to put? They&#39;re here, and they&#39;re designed to make your life happy.&quot;</p>
 <p>From Compass Normalize&#39;s description: &quot;This simple plugin for Compass enables you to use <a href="http://necolas.github.io/normalize.css/">normalize.css</a> in your stylesheets without having to download it.&quot;</p>

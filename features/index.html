@@ -24,7 +24,7 @@
         <aside id="page-id">
           <h2 class="section-name">Features</h2>
           <div class="page-info">
-            <p>Version 7.x-3.0</p>
+            <p>Version 7.x-3.3</p>
           </div>
         </aside>
       </header>
@@ -41,38 +41,33 @@
         <article>
           <section id="basic">
             <h1>Basic Features</h1><p>Aurora has a handful of useful features allowing you to get up and theming quickly. Many of the features from Aurora 2.x have been moved to the <a href="http://drupal.org/project/magic">Magic module</a>, so be sure to install Magic to get the most out of Aurora.</p>
-<h2>HTML5 Templates</h2>
+<h2 id="html5-templates">HTML5 Templates</h2>
 <p>Aurora comes with many of Drupal&#39;s default templates updated to use the proper HTML5 syntaxes as well as proper ARIA roles. It also comes with an HTML5 Figure layout for <a href="http://drupal.org/project/ds">Display Suite</a> and an HTML5 Sections layout for <a href="http://drupal.org/project/panels">Panels</a> which is a fork of the Flexible layout, but only allowing for rows, thus allowing for source ordering and grouping. The Panels Sections layout produces much cleaner default HTML than then Flexible layout, and you can edit the attributes of the output with the following hook:</p>
 <pre><code class="lang-php">hook_aurora_layout_attributes_alter(&amp;$attributes)</code></pre>
-<h2>Internet Explorer Support</h2>
-<p>Old Internet Explorer support is a pain. Aurora comes with a couple of ways of making it easier. A dropdown menu allows you to choose your minimum supported IE version, which will add an <code>.lt-ie{version}</code> to your HTML for versions of IE less than your supported version of IE. A checkbox will also allow you to enable or disable <a href="https://www.youtube.com/watch?v=sjW0Bchdj-w&amp;feature=player_embedded">Google Chrome Frame</a>, which itself is wrapped to display only below your minimum supported version of IE.</p>
-<h2>Development Options</h2>
+<h2 id="internet-explorer-support">Internet Explorer Support</h2>
+<p>Old Internet Explorer support is a pain. Aurora comes with a couple of ways of making it easier. A dropdown menu allows you to choose your minimum supported IE version, which will add an <code>.lt-ie{version}</code> to your HTML for versions of IE less than your supported version of IE.</p>
+<h2 id="development-options">Development Options</h2>
 <p>A select box will allow you to add the <a href="http://livereload.com/">LiveReload</a> JavaScript snippet to all of your pages, allowing you to have your site automatically reload on changes. This is very useful for designing in browser.</p>
-<h2>Typekit Integration</h2>
+<h2 id="typekit-integration">Typekit Integration</h2>
 <p>We love web fonts, yes we do! We love web fonts, how &#39;bout you?! Aurora comes with built-in support for <a href="https://typekit.com/">Typekit</a>. Simply add your Typekit&#39;s Kit ID into the Typekit settings and Aurora automatically adds in the advanced, asymmetric font loading code for your kit.</p>
-<h2>Miscellaneous</h2>
+<h2 id="miscellaneous">Miscellaneous</h2>
 <p>Aurora also has an option to prune your <code>&lt;style&gt;</code>, <code>&lt;link&gt;</code>, and <code>&lt;script&gt;</code> tags as suggested by <a href="http://sonspring.com/journal/html5-in-drupal-7#_pruning">Nathan Smith</a>.</p>
 
           </section>
           <section id="advanced">
             <h1>Advanced Features</h1><p>Aurora comes with some advanced features that you need to install separately if you would like to use. These features will greatly improve your development experience, so we encourage you to use them.</p>
-<h2>Bower</h2>
+<h2 id="bower">Bower</h2>
 <p>If you would like to take advantage of Bower integration, first make sure you have <a href="../install">installed Bower</a>, then from your command line, type the following in:</p>
-<pre><code class="lang-bash">compass install aurora/bower</code></pre>
+<pre><code class="lang-bash">yo aurora:extras</code></pre>
 <p>This will install a <code>components.json</code> file as well as a <code>.bowerrc</code> file to allow you to use Bower out of the box. Aurora&#39;s provided <code>components.json</code> includes a <a href="http://formalize.me/">Formalize</a> dependency for added normalization across browsers. To install it, from your command line, type the following in:</p>
 <pre><code class="lang-bash">bower install</code></pre>
-<h2>Grunt</h2>
-<p>If you would like to take advantage of the Grunt integration, first make sure you have <a href="../install">installed Grunt</a>, then from your command line, type the following in:</p>
-<pre><code class="lang-bash">compass install aurora/grunt</code></pre>
-<p>This will install a <code>Gruntfile.js</code> file as well as a <code>package.json</code> file to manage your Grunt dependencies. The build of Grunt Aurora comes with handles a handful of very useful functions depending on whether you <code>watch</code> or <code>build</code>.</p>
-<p>To install the Grunt dependencies, from your command line, type the following in:</p>
+<h2 id="gulp">Gulp</h2>
+<p>If you would like to take advantage of the Gulp integration, first make sure you have <a href="../install">installed Gulp</a>, then from your command line, type the following in:</p>
+<pre><code class="lang-bash">yo aurora:extras</code></pre>
+<p>This will install a <code>gulpfile.js</code> file as well as a <code>package.json</code> file to manage your Gulp dependencies.</p>
+<p>To install the Gulp dependencies, from your command line, type the following in:</p>
 <pre><code class="lang-bash">npm install</code></pre>
-<h3>Watch Task</h3>
-<pre><code class="lang-bash">grunt watch</code></pre>
-<p>While you&#39;re developing, it&#39;s useful to have your Sass compile on the fly and reload your browser. The watch task will automatically compile your Sass files for you, including running everything through <code>bundle exec</code>, will <a href="http://jshint.com/">JSHint</a> your JavaScript files for you, run a LiveReload server, and reload your browser for you whenever your Sass or JavaScript changes! To take advantage of the Grunt LiveReload server, set your LiveReload setting to <code>Aurora Default Port</code>.</p>
-<h3>Build Task</h3>
-<pre><code class="lang-bash">grunt build</code></pre>
-<p>When you&#39;re ready for production, it&#39;s time to get your files in tip-top shape. The build task will compile your Sass for production, run your images through <a href="http://optipng.sourceforge.net/">OptiPNG</a> and <a href="http://jpegclub.org/jpegtran/">jpegtran</a> to optimize them, ensure your Sass image paths are pointing to the optimized images (assuming you&#39;re using <code>image-url</code>), and give your JavaScript one final pass through JSHint.</p>
+<h3 id="gulp-documentation-in-the-works">Gulp Documentation in the works</h3>
 
           </section>
         </article>
