@@ -14,7 +14,7 @@
         };
         var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
       })();
-      
+
     </script>
   </head>
   <body>
@@ -58,12 +58,12 @@
             <h1>Advanced Features</h1><p>Aurora comes with some advanced features that you need to install separately if you would like to use. These features will greatly improve your development experience, so we encourage you to use them.</p>
 <h2 id="bower">Bower</h2>
 <p>If you would like to take advantage of Bower integration, first make sure you have <a href="../install">installed Bower</a>, then from your command line, type the following in:</p>
-<pre><code class="lang-bash">yo aurora:extras</code></pre>
+<pre><code class="lang-bash">yo drupal-theme:extras</code></pre>
 <p>This will install a <code>components.json</code> file as well as a <code>.bowerrc</code> file to allow you to use Bower out of the box. Aurora&#39;s provided <code>components.json</code> includes a <a href="http://formalize.me/">Formalize</a> dependency for added normalization across browsers. To install it, from your command line, type the following in:</p>
 <pre><code class="lang-bash">bower install</code></pre>
 <h2 id="gulp">Gulp</h2>
 <p>If you would like to take advantage of the Gulp integration, first make sure you have <a href="../install">installed Gulp</a>, then from your command line, type the following in:</p>
-<pre><code class="lang-bash">yo aurora:extras</code></pre>
+<pre><code class="lang-bash">yo drupal-theme:extras</code></pre>
 <p>This will install a <code>gulpfile.js</code> file as well as a <code>package.json</code> file to manage your Gulp dependencies.</p>
 <p>To install the Gulp dependencies, from your command line, type the following in:</p>
 <pre><code class="lang-bash">npm install</code></pre>

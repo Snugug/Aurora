@@ -14,7 +14,7 @@
         };
         var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
       })();
-      
+
     </script>
   </head>
   <body>
@@ -41,9 +41,9 @@
         <article>
           <section>
             <h1>Subthemes</h1><p>Aurora is designed as a base theme, the code of which should not be touched and which should never be used as a stand-alone theme. Creating subthemes is now done through <a href="http://yeoman.io/">Yeoman</a>. Make sure you have <a href="/install/">installed all prerequisites</a>, then within your theme folder, run:</p>
-<pre><code class="lang-bash">yo aurora</code></pre>
+<pre><code class="lang-bash">yo drupal-theme</code></pre>
 <p>You will be prompted for your project name, and the type of project you want to start. There are several flavors of Aurora, each listed below. You can also optionally add a gulpfile.js or bower.json file along with your project. If you do not select one of these options, you can add them in later with:</p>
-<pre><code class="lang-bash">yo aurora:extras</code></pre>
+<pre><code class="lang-bash">yo drupal-theme:extras</code></pre>
 <p>When the generator runs, it will grab all dependencies that are required. This will</p>
 
           </section>
